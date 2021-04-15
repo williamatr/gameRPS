@@ -69,13 +69,13 @@ main {
   color: white;
   border: 1px solid;
   border-radius: 50px;
-  font-size: 18px;
+  font-size: 2vw;
   transition: font-size 0.5s;
 }
 .index__container button:hover {
   background: rgb(95, 29, 160);
   border: 2px solid;
-  font-size: 22px;
+  font-size: 3vw;
 }
 .instructions__container {
   background: rgba(102, 51, 153, 0.5);
@@ -90,7 +90,7 @@ main {
   display: flex;
   flex-flow: column;
   align-items: center;
-  font-size: 20px;
+  font-size: 2.2vw;
 }
 .instructions__container__rules img {
   width: 50%;
@@ -102,16 +102,19 @@ main {
   color: white;
   border: 1px solid;
   border-radius: 50px;
-  font-size: 16px;
+  font-size: 2vw;
   transition: font-size 0.5s;
 }
 .instructions__container__button--continue:hover {
   background: rgb(95, 29, 160);
   border: 1px solid;
-  font-size: 20px;
+  font-size: 3vw;
 }
 .containerA{
     margin-top: 10px;
+    font-size: 3vw;
+    font-weight: bold;
+    text-align: center;
 }
 .containerA__board{
     width: 90vw;
