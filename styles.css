@@ -1,0 +1,145 @@
+* {
+  font-family: "Times New Roman", Times, serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  background: rgba(102, 51, 153, 0.5);
+}
+.container {
+  background: greenyellow;
+  height: 100px;
+  width: 100px;
+}
+header {
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+}
+header a:link {
+    color: white;
+    text-decoration: none;
+}
+header a:visited {
+    color: white;
+    text-decoration: none;
+}
+footer {
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  height: 4rem;
+  margin-top: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+}
+
+footer p > a:link {
+  color: white;
+  text-decoration: none;
+}
+footer p > a:visited {
+  color: rgb(255, 255, 255, 0.5);
+}
+footer p > a:active {
+  color: rgb(102, 51, 153);
+}
+.footer__autor {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+main {
+  margin-top: auto;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.index__container button {
+  height: 12vh;
+  width: 25vw;
+  background: rgb(102, 51, 153);
+  color: white;
+  border: 1px solid;
+  border-radius: 50px;
+  font-size: 18px;
+  transition: font-size 0.5s;
+}
+.index__container button:hover {
+  background: rgb(95, 29, 160);
+  border: 2px solid;
+  font-size: 22px;
+}
+.instructions__container {
+  background: rgba(102, 51, 153, 0.5);
+  display: flex;
+  flex-flow: column;
+  color: white;
+  align-items: center;
+  padding: 20px;
+  border-radius: 30px;
+}
+.instructions__container__rules {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  font-size: 20px;
+}
+.instructions__container__rules img {
+  width: 50%;
+}
+.instructions__container__button--continue {
+  height: 10vh;
+  width: 20vw;
+  background: rgb(102, 51, 153);
+  color: white;
+  border: 1px solid;
+  border-radius: 50px;
+  font-size: 16px;
+  transition: font-size 0.5s;
+}
+.instructions__container__button--continue:hover {
+  background: rgb(95, 29, 160);
+  border: 1px solid;
+  font-size: 20px;
+}
+.containerA{
+    margin-top: 10px;
+}
+.containerA__board{
+    width: 90vw;
+    height: 50vh;
+    padding: 10px;
+    border-radius: 20px;
+    background: rgba(102, 51, 153, 0.5);
+    color: white;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+.containerA__board__img img{
+    height: 10vh;
+}
+.containerB{
+    margin-top: 20px;
+}
+.containerB__options{
+    height: 30vh;
+    width: 90vw;
+    padding: 10px;
+    border-radius: 20px;
+    background: rgba(102, 51, 153, 0.5);
+    color: white;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
