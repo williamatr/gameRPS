@@ -2,7 +2,7 @@
 
 ## Piedras / Papel / Tijeras / Lagarto / Spock
 <div align="center">
-    <img src="https://raw.githubusercontent.com/bitwarden/brand/master/screenshots/web-vault-macbook.png" alt="" width="600" height="358" />
+    <img src="./assets/rules_PPTLS.png" alt="" width="600" height="358" />
 </div>
 <p align="center">
 Proyecto para el curso base de JS de Platzi y con motivo educativo para el grupo de trabajo "Aprendiendo a programar ACME"
