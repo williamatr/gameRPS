@@ -1,4 +1,4 @@
-# Juego en HTML/CSS/JS
+# Juego en HTML / CSS / JS
 
 ## Piedras / Papel / Tijeras / Lagarto / Spock
 <div align="center">
