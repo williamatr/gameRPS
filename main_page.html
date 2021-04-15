@@ -10,16 +10,25 @@
   <body>
     <header>
       <a href="index.html">
+        <img src="./assets/rules_PPTLS.png" alt="" />
         <h1 class="header--title">
           Piedra / Papel / Tijeras / Largarto / Spock
         </h1>
+        <img src="./assets/rules_PPTLS.png" alt="" />
       </a>
     </header>
     <main>
       <section class="containerA">
         <div class="containerA__board">
+          <div class="containerA__board--img_user_select">
+            <img
+              id="usuario"
+              src="./assets/transparent.png"
+              alt="imagen seleccionada usuario"
+            />
+          </div>
           <div class="containerA__board--title">
-            <img id="usuario" src="./img/user_icon.png" alt="" />
+            <img src="./assets/human.png" alt="" />
             <p>Usuario</p>
             <p id="puntos_usuario">0</p>
           </div>
@@ -28,15 +37,51 @@
             <img src="./assets/versus.png" alt="versus" />
           </div>
 
-          <div class="containerA__board__card--title">
-            <img id="cpu" src="./img/cpu.png" alt="" />
+          <div class="containerA__board--title">
+            <img src="./assets/PC.png" alt="" />
             <p>CPU</p>
             <p id="puntos_cpu">0</p>
+          </div>
+          <div class="containerA__board--img_pc_select">
+            <img
+              id="cpu"
+              src="./assets/transparent.png"
+              alt="imagen seleccionada PC"
+            />
           </div>
         </div>
       </section>
       <section class="containerB">
-        <div class="containerB__options"></div>
+        <div class="containerB__options">
+          <div class="containerB__options__list">
+            <ul class="containerB__options__list--ul">
+              <li class="containerB__options__list--li">
+                <button id="Piedra">Item Piedra</button>
+              </li>
+              <li class="containerB__options__list--li">
+                <button id="Papel">Item Papel</button>
+              </li>
+              <li class="containerB__options__list--li">
+                <button id="Tijeras">Item Tijeras</button>
+              </li>
+              <li class="containerB__options__list--li">
+                <button id="Lagarto">Item Lagarto</button>
+              </li>
+              <li class="containerB__options__list--li">
+                <button id="Spock">Item Spock</button>
+              </li>
+            </ul>
+          </div>
+          <div class="containerB__options__button">
+            <button
+              id="Iniciar_juego"
+              class="containerB__options__button--confirm"
+              type="button"
+            >
+              Confirmar
+            </button>
+          </div>
+        </div>
       </section>
       <div class=""></div>
     </main>
