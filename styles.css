@@ -92,6 +92,7 @@ main {
   background: rgb(95, 29, 160);
   border: 2px solid;
   font-size: 3vw;
+  cursor: pointer;
 }
 .instructions__container {
   background: rgba(102, 51, 153, 0.5);
@@ -124,6 +125,7 @@ main {
 .instructions__container__button--continue:hover {
   background: rgb(95, 29, 160);
   border: 1px solid;
+  cursor: pointer;
   font-size: 3vw;
 }
 /*-------Tablero de juego ------*/
@@ -215,6 +217,7 @@ main {
   width: 15vw;
   border: 0;
   font-size: 1.5vw;
+  cursor: pointer;
   color: rgba(0, 0, 0, 0.6);
 }
 .containerB__options__list--li button:hover {
@@ -240,6 +243,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
  
   transition: font-size 0.3s;
 }
