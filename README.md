@@ -17,4 +17,4 @@ Proyecto para el curso base de JS de Platzi y con motivo educativo para el grupo
 
 ## Expresiones de Gratitud 🎁
 
-* Muchas gracias a Rafael Lozano por su contribucion en Platzi que sirvio de insipiracion para este proyecto - Link (https://github.com/RafaelLozano/Piedra_papel_tijeras)
+* Muchas gracias a [RafaelLozano](https://github.com/RafaelLozano) por su contribucion en Platzi que sirvio de insipiracion para este proyecto - Link (https://github.com/RafaelLozano/Piedra_papel_tijeras)
