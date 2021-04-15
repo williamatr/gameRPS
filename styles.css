@@ -22,17 +22,17 @@ header {
   display: flex;
   justify-content: center;
 }
-header a{
-    display: flex;
-    flex-flow: row;
-    justify-content: space-around;
-    align-items: center;
+header a {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  align-items: center;
 }
 header img {
   height: 3rem;
   padding: 5px;
-  margin-left: 20px;
-  margin-right: 20px
+  margin-left: 2vw;
+  margin-right: 2vw;
 }
 header a:link {
   color: white;
@@ -147,13 +147,13 @@ main {
   width: 10vw;
 }
 .containerA__board--img_user_select {
-  padding: 10px;
+  padding: 4vw;
 }
 .containerA__board--img_user_select img {
   width: 10vw;
 }
 .containerA__board--img_pc_select {
-  padding: 10px;
+  padding: 4vw;
 }
 .containerA__board--img_pc_select img {
   width: 10vw;
@@ -162,7 +162,7 @@ main {
   margin-top: 20px;
 }
 .containerB__options {
-  height: 30vh;
+  height: 40vh;
   width: 90vw;
   padding: 10px;
   border-radius: 20px;
@@ -177,10 +177,54 @@ main {
   display: flex;
   flex-flow: column;
 }
+.containerB__options__list {
+  height: 15vh;
+}
 .containerB__options__list--ul {
   display: flex;
   list-style: none;
 }
 .containerB__options__list--li {
   padding: 10px;
+}
+.containerB__options__list--li button {
+  background-color: transparent;
+  background-size: cover;
+  height: 10vw;
+  width: 10vw;
+  border: 0;
+  font-size: 1.5vw;
+  color: rgba(0, 0, 0, 0.6);
+}
+.containerB__options__list--li button:hover {
+  height: 15vw;
+  width: 15vw;
+  font-size: 2vw;
+  rgba(0, 0, 0, 0.8);
+  padding: 0;
+  margin: 0;
+}
+.containerB__options__button {
+  margin-top: 10vh;
+  display: fixed;
+}
+.containerB__options__button--confirm {
+  height: 6vh;
+  width: 15vw;
+  border-radius: 10px;
+  border: 1px solid white;
+  margin: 0;
+  font-size: 1.8vw;
+  background: rgba(102, 51, 153, 0.5);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  transition: font-size 0.3s;
+}
+.containerB__options__button--confirm:hover {
+  font-size: 2.2vw;
+  background: rgba(102, 51, 153, 0.8);
+  border: 2px solid white;
 }
