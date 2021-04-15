@@ -133,7 +133,6 @@ main {
   height: 10vh;
   margin-bottom: 3vh;
   border-radius: 10px;
-  border: .2vw solid white;
 }
 .containerA__board__result {
   width: 90vw;
