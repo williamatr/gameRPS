@@ -122,19 +122,33 @@ main {
   border: 1px solid;
   font-size: 3vw;
 }
+/*-------Tablero de juego ------*/
 .containerA {
   margin-top: 10px;
   font-size: 3vw;
   font-weight: bold;
   text-align: center;
 }
-.containerA__board {
+.containerA__result__box img{
+  height: 10vh;
+  margin-bottom: 3vh;
+  border-radius: 10px;
+  border: .2vw solid white;
+}
+.containerA__board__result {
   width: 90vw;
   height: 50vh;
   padding: 10px;
   border: .7vw double white;
   border-radius: 20px;
   background: rgba(102, 51, 153, 0.5);
+  color: white;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.containerA__board {
   color: white;
   display: flex;
   flex-flow: row;
@@ -159,6 +173,7 @@ main {
 .containerA__board--img_pc_select img {
   width: 10vw;
 }
+/* ---- Opciones del jugador ------*/
 .containerB {
   margin-top: 20px;
 }
@@ -181,7 +196,7 @@ main {
   flex-flow: column;
 }
 .containerB__options__list {
-  height: 15vh;
+  height: 20vh;
 }
 .containerB__options__list--ul {
   display: flex;
@@ -193,15 +208,15 @@ main {
 .containerB__options__list--li button {
   background-color: transparent;
   background-size: cover;
-  height: 10vw;
-  width: 10vw;
+  height: 15vh;
+  width: 15vh;
   border: 0;
   font-size: 1.5vw;
   color: rgba(0, 0, 0, 0.6);
 }
 .containerB__options__list--li button:hover {
-  height: 15vw;
-  width: 15vw;
+  height: 20vh;
+  width: 20vh;
   font-size: 2vw;
   rgba(0, 0, 0, 0.8);
   padding: 0;

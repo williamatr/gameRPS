@@ -8,6 +8,7 @@ var btn_spock = document.getElementById("Spock");
 var btn_iniciar = document.getElementById("jugar");
 var img_user = document.getElementById("user");
 var img_pc = document.getElementById("pc");
+var img_result = document.getElementById("result")
 var marcador_user = document.getElementById("puntos_user").innerText;
 var marcador_pc = document.getElementById("puntos_pc").innerText;
 
@@ -115,12 +116,15 @@ function game(opcion_jugador, opcion_pc) {
     escenario_10
   ) {
     //alert("user gana");
+    img_result.src = "./assets/ganas_PPTLS.png"
     marcador_user++;
     document.getElementById("puntos_user").innerText = marcador_user;
   } else if (empate) {
     //alert("EMPATE");
+    img_result.src = "./assets/empate_PPTLS.png"
   } else {
     //alert("pc gana");
+    img_result.src = "./assets/pierdes_PPTLS.png"
     marcador_pc++;
     document.getElementById("puntos_pc").innerText = marcador_pc;
   }
