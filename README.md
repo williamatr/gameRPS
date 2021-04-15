@@ -8,6 +8,9 @@
 Proyecto para el curso base de JS de Platzi y con motivo educativo para el grupo de trabajo "Aprendiendo a programar ACME"
 </p>
 <p align="center">
+    Puedes probar el juego en el siguiente link!
+</p>
+<p align="center">
 (https://williamtovar.github.io/gameRPS/index.html)
 </p>
 
