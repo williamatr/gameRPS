@@ -17,10 +17,11 @@ var Opcion_cpu;
 init_imagenes();
 btn_iniciar.onclick = function () {
   Menu = "inicio";
-  console.log(Opcion_jugador);
+  console.log(Opcion_jugador, " opt_player");
   Opcion_cpu = num_aleatorio();
-  display_opcion_cpu(Opcion_cpu);
-  game(Opcion_jugador, Opcion_cpu);
+  console.log(Opcion_cpu, " opt CPU");
+  display_opcion_cpu(Opcion_cpu);  
+  setTimeout(game(Opcion_jugador, Opcion_cpu),3000);  
 };
 btn_piedra.onclick = function () {
   Opcion_jugador = 0;
