@@ -34,6 +34,9 @@ header img {
   margin-left: 2vw;
   margin-right: 2vw;
 }
+.header--title{
+  font-size: 2vw;
+}
 header a:link {
   color: white;
   text-decoration: none;
@@ -45,8 +48,9 @@ header a:visited {
 footer {
   background: rgba(0, 0, 0, 0.9);
   color: white;
-  height: 4rem;
+  height: 5rem;
   margin-top: auto;
+  font-size: 2vw;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -177,7 +181,7 @@ main {
   margin-top: 20px;
 }
 .containerB__options {
-  height: 35vh;
+  height: 35vw;
   width: 90vw;
   padding: 10px;
   border: .7vw double white;
@@ -195,7 +199,7 @@ main {
   flex-flow: column;
 }
 .containerB__options__list {
-  height: 20vh;
+  height: 20vw;
 }
 .containerB__options__list--ul {
   display: flex;
@@ -207,30 +211,29 @@ main {
 .containerB__options__list--li button {
   background-color: transparent;
   background-size: cover;
-  height: 15vh;
-  width: 15vh;
+  height: 15vw;
+  width: 15vw;
   border: 0;
   font-size: 1.5vw;
   color: rgba(0, 0, 0, 0.6);
 }
 .containerB__options__list--li button:hover {
-  height: 20vh;
-  width: 20vh;
+  height: 20vw;
+  width: 20vw;
   font-size: 2vw;
   rgba(0, 0, 0, 0.8);
   padding: 0;
   margin: 0;
 }
 .containerB__options__button {
-  margin-top: 5vh;
+  margin-top: 5vw;
   display: fixed;
 }
 .containerB__options__button--confirm {
-  height: 6vh;
+  height: 6vw;
   width: 15vw;
   border-radius: 10px;
-  border: 1px solid white;
-  margin: 0;
+  border: 1px solid white;  
   font-size: 1.8vw;
   background: rgba(102, 51, 153, 0.5);
   color: white;
