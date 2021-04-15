@@ -13,7 +13,7 @@ Proyecto para el curso base de JS de Platzi y con motivo educativo para el grupo
 
 ## Autores ✒️
 
-* **William A. Tovar R.** - *Trabajo Inicial* - [williamtovar](https://github.com/williamtovar)
+* **William A. Tovar R.** - *Desarrollador* - [williamtovar](https://github.com/williamtovar)
 
 ## Expresiones de Gratitud 🎁
 
