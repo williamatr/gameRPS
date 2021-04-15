@@ -1,47 +1,48 @@
+//Defino Variables
 var btn_piedra = document.getElementById("Piedra");
 var btn_papel = document.getElementById("Papel");
 var btn_tijeras = document.getElementById("Tijeras");
 var btn_lagarto = document.getElementById("Lagarto");
 var btn_spock = document.getElementById("Spock");
 
-var btn_iniciar = document.getElementById("Iniciar_juego");
-var img_usuario = document.getElementById("usuario");
-var img_cpu = document.getElementById("cpu");
-var marcador_usuario = document.getElementById("puntos_usuario").innerText;
-var marcador_cpu = document.getElementById("puntos_cpu").innerText;
+var btn_iniciar = document.getElementById("jugar");
+var img_user = document.getElementById("user");
+var img_pc = document.getElementById("pc");
+var marcador_user = document.getElementById("puntos_user").innerText;
+var marcador_pc = document.getElementById("puntos_pc").innerText;
 
 var Menu = "espera";
 var Opcion_jugador;
-var Opcion_cpu;
+var Opcion_pc;
 
 init_imagenes();
 btn_iniciar.onclick = function () {
   Menu = "inicio";
   console.log(Opcion_jugador, " opt_player");
-  Opcion_cpu = num_aleatorio();
-  console.log(Opcion_cpu, " opt CPU");
-  display_opcion_cpu(Opcion_cpu);  
-  setTimeout(game(Opcion_jugador, Opcion_cpu),3000);  
+  Opcion_pc = num_aleatorio();
+  console.log(Opcion_pc, " opt pc");
+  display_opcion_pc(Opcion_pc);  
+  setTimeout(game(Opcion_jugador, Opcion_pc),3000);  
 };
 btn_piedra.onclick = function () {
   Opcion_jugador = 0;
-  img_usuario.src = "./assets/rockPPTLS.png";
+  img_user.src = "./assets/rockPPTLS.png";
 };
 btn_papel.onclick = function () {
   Opcion_jugador = 1;
-  img_usuario.src = "./assets/paperPPTLS.png";
+  img_user.src = "./assets/paperPPTLS.png";
 };
 btn_tijeras.onclick = function () {
   Opcion_jugador = 2;
-  img_usuario.src = "./assets/scissorsPPTLS.png";
+  img_user.src = "./assets/scissorsPPTLS.png";
 };
 btn_lagarto.onclick = function () {
   Opcion_jugador = 3;
-  img_usuario.src = "./assets/lizardPPTLS.png";
+  img_user.src = "./assets/lizardPPTLS.png";
 };
 btn_spock.onclick = function () {
   Opcion_jugador = 4;
-  img_usuario.src = "./assets/spockPPTLS.png";
+  img_user.src = "./assets/spockPPTLS.png";
 };
 
 switch (Menu) {
@@ -65,7 +66,7 @@ function num_aleatorio() {
   return parseInt(Math.random() * 5);
 }
 
-function game(opcion_jugador, opcion_cpu) {
+function game(opcion_jugador, opcion_pc) {
   var escenario_1; //Piedra 0 gana Tijeras 2
   var escenario_2; //Papel 1 gana Piedra 0
   var escenario_3; //Tijeras 2 gana Papel 1
@@ -77,27 +78,27 @@ function game(opcion_jugador, opcion_cpu) {
   var escenario_9; //Spock 4 gana Tijeras 2
   var escenario_10; //Spock 4 gana Piedra 0
   var empate;
-  if (opcion_jugador === opcion_cpu) {
+  if (opcion_jugador === opcion_pc) {
     empate = true;
-  } else if (opcion_jugador === 0 && opcion_cpu === 2) {
+  } else if (opcion_jugador === 0 && opcion_pc === 2) {
     escenario_1 = true;
-  } else if (opcion_jugador === 1 && opcion_cpu === 0) {
+  } else if (opcion_jugador === 1 && opcion_pc === 0) {
     escenario_2 = true;
-  } else if (opcion_jugador === 2 && opcion_cpu === 1) {
+  } else if (opcion_jugador === 2 && opcion_pc === 1) {
     escenario_3 = true;
-  } else if (opcion_jugador === 0 && opcion_cpu === 3) {
+  } else if (opcion_jugador === 0 && opcion_pc === 3) {
     escenario_4 = true;
-  } else if (opcion_jugador === 1 && opcion_cpu === 4) {
+  } else if (opcion_jugador === 1 && opcion_pc === 4) {
     escenario_5 = true;
-  } else if (opcion_jugador === 2 && opcion_cpu === 3) {
+  } else if (opcion_jugador === 2 && opcion_pc === 3) {
     escenario_6 = true;
-  } else if (opcion_jugador === 3 && opcion_cpu === 4) {
+  } else if (opcion_jugador === 3 && opcion_pc === 4) {
     escenario_7 = true;
-  } else if (opcion_jugador === 3 && opcion_cpu === 1) {
+  } else if (opcion_jugador === 3 && opcion_pc === 1) {
     escenario_8 = true;
-  } else if (opcion_jugador === 4 && opcion_cpu === 2) {
+  } else if (opcion_jugador === 4 && opcion_pc === 2) {
     escenario_9 = true;
-  } else if (opcion_jugador === 4 && opcion_cpu === 0) {
+  } else if (opcion_jugador === 4 && opcion_pc === 0) {
     escenario_10 = true;
   }
 
@@ -113,28 +114,28 @@ function game(opcion_jugador, opcion_cpu) {
     escenario_9 ||
     escenario_10
   ) {
-    alert("usuario gana");
-    marcador_usuario++;
-    document.getElementById("puntos_usuario").innerText = marcador_usuario;
+    //alert("user gana");
+    marcador_user++;
+    document.getElementById("puntos_user").innerText = marcador_user;
   } else if (empate) {
-    alert("EMPATE");
+    //alert("EMPATE");
   } else {
-    alert("CPU gana");
-    marcador_cpu++;
-    document.getElementById("puntos_cpu").innerText = marcador_cpu;
+    //alert("pc gana");
+    marcador_pc++;
+    document.getElementById("puntos_pc").innerText = marcador_pc;
   }
 }
 
-function display_opcion_cpu(opcion) {
+function display_opcion_pc(opcion) {
   if (opcion === 0) {
-    img_cpu.src = "./assets/rockPPTLS.png";
+    img_pc.src = "./assets/rockPPTLS.png";
   } else if (opcion === 1) {
-    img_cpu.src = "./assets/paperPPTLS.png";
+    img_pc.src = "./assets/paperPPTLS.png";
   } else if (opcion === 2) {
-    img_cpu.src = "./assets/scissorsPPTLS.png";
+    img_pc.src = "./assets/scissorsPPTLS.png";
   } else if (opcion === 3) {
-    img_cpu.src = "./assets/lizardPPTLS.png";
+    img_pc.src = "./assets/lizardPPTLS.png";
   } else {
-    img_cpu.src = "./assets/spockPPTLS.png";
+    img_pc.src = "./assets/spockPPTLS.png";
   }
 }

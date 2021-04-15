@@ -132,6 +132,7 @@ main {
   width: 90vw;
   height: 50vh;
   padding: 10px;
+  border: .7vw double white;
   border-radius: 20px;
   background: rgba(102, 51, 153, 0.5);
   color: white;
@@ -162,9 +163,10 @@ main {
   margin-top: 20px;
 }
 .containerB__options {
-  height: 40vh;
+  height: 35vh;
   width: 90vw;
   padding: 10px;
+  border: .7vw double white;
   border-radius: 20px;
   background: rgba(102, 51, 153, 0.5);
   color: white;
@@ -172,6 +174,7 @@ main {
   flex-flow: row;
   justify-content: center;
   align-items: center;
+  margin-bottom: 1vh;
 }
 .containerB__options {
   display: flex;
@@ -205,7 +208,7 @@ main {
   margin: 0;
 }
 .containerB__options__button {
-  margin-top: 10vh;
+  margin-top: 5vh;
   display: fixed;
 }
 .containerB__options__button--confirm {
