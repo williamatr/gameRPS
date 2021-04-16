@@ -252,3 +252,30 @@ main {
   background: rgba(102, 51, 153, 0.8);
   border: 2px solid white;
 }
+
+@media only screen and (min-width: 1200px) {
+  .containerB__options__button {
+    margin-top: 5px;
+  }
+  .containerB__options__button--confirm {
+    height: 80px;
+    width: 15vw; 
+    font-size: 30px;
+  }
+  .containerB__options__button--confirm:hover {
+    font-size: 35px;
+  }
+  .containerB__options__list--li button {
+    height: 170px;
+    width: 170px;
+    font-size: 25px;
+  }
+  .containerB__options__list--li button:hover {
+    height: 200px;
+    width: 200px;
+    font-size: 30px;    
+  }
+  .containerB__options__list {
+    height: 250px;
+  }
+}
