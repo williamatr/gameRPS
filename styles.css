@@ -4,17 +4,20 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   height: 100vh;
   display: flex;
   flex-flow: column nowrap;
   background: rgba(102, 51, 153, 0.5);
 }
+
 .container {
   background: greenyellow;
   height: 100px;
   width: 100px;
 }
+
 header {
   background: rgba(0, 0, 0, 0.9);
   color: white;
@@ -54,9 +57,7 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  display: flex;
 }
-
 footer p > a:link {
   color: white;
   text-decoration: none;
@@ -72,6 +73,7 @@ footer p > a:active {
   flex-flow: column nowrap;
   align-items: center;
 }
+
 main {
   margin-top: auto;
   display: flex;
@@ -128,7 +130,7 @@ main {
   cursor: pointer;
   font-size: 3vw;
 }
-/*-------Tablero de juego ------*/
+/*--------------------------Tablero de juego ------*/
 .containerA {
   margin-top: 10px;
   font-size: 3vw;
@@ -178,6 +180,7 @@ main {
 .containerA__board--img_pc_select img {
   width: 10vw;
 }
+
 /* ---- Opciones del jugador ------*/
 .containerB {
   margin-top: 20px;
