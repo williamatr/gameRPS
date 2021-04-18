@@ -77,8 +77,9 @@ footer p > a:active {
 main {
   margin-top: auto;
   display: flex;
-  flex-flow: column;
+  flex-flow: row;
   align-items: center;
+  justify-content:center;
 }
 .index__container button {
   height: 12vh;
@@ -161,6 +162,7 @@ main {
   flex-flow: row;
   justify-content: center;
   align-items: center;
+  flex: 1;
 }
 .containerA__board--title img {
   width: 10vw;
@@ -183,32 +185,34 @@ main {
 
 /* ---- Opciones del jugador ------*/
 .containerB {
-  margin-top: 20px;
+  display: flex;
+  margin-top: 5px;
+  flex: 0 0 5%;
+}
+.containerB__options__view{
+  
 }
 .containerB__options {
-  height: 35vw;
-  width: 90vw;
+  height: 95vw;
+  width: 20vw;
   padding: 10px;
   border: .7vw double white;
   border-radius: 20px;
   background: rgba(102, 51, 153, 0.5);
   color: white;
   display: flex;
-  flex-flow: row;
+  flex-flow: column wrap;
   justify-content: center;
   align-items: center;
   margin-bottom: 1vh;
 }
-.containerB__options {
-  display: flex;
-  flex-flow: column;
-}
 .containerB__options__list {
-  height: 20vw;
+  height: 100vw;
 }
 .containerB__options__list--ul {
   display: flex;
   list-style: none;
+  flex-flow: column;
 }
 .containerB__options__list--li {
   padding: 10px;
@@ -257,6 +261,9 @@ main {
 }
 
 @media only screen and (min-width: 1200px) {
+  main {
+    flex-flow: column;
+  }
   .containerB__options__button {
     margin-top: 5px;
   }
@@ -280,5 +287,12 @@ main {
   }
   .containerB__options__list {
     height: 250px;
+  }
+  .containerB__options {
+    height: 15vw;
+    width: 95vw;
+  } 
+  .containerB__options__list--ul {    
+    flex-flow: row;
   }
 }
