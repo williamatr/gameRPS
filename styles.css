@@ -133,10 +133,12 @@ main {
 }
 /*--------------------------Tablero de juego ------*/
 .containerA {
+  position: absolute;
   margin-top: 10px;
   font-size: 3vw;
   font-weight: bold;
   text-align: center;
+  margin-right: 6vw;
 }
 .containerA__result__box img{
   height: 10vh;
@@ -164,46 +166,46 @@ main {
   align-items: center;
   flex: 1;
 }
-.containerA__board--title img {
+.containerA__board__user--img img{
+  width: 20vw;
+}
+.containerA__board__pc--img img {
+  width: 20vw;
+}
+.containerA__board__vs--img img{
+  width: 20vw;
+}
+.containerA__board__user--img_select {
+  padding: 1vw;
+}
+.containerA__board__user--img_select img {
   width: 10vw;
 }
-.containerA__board__img img {
-  width: 10vw;
+.containerA__board__pc--img_select {
+  padding: 1vw;
 }
-.containerA__board--img_user_select {
-  padding: 4vw;
-}
-.containerA__board--img_user_select img {
-  width: 10vw;
-}
-.containerA__board--img_pc_select {
-  padding: 4vw;
-}
-.containerA__board--img_pc_select img {
+.containerA__board__pc--img_select img {
   width: 10vw;
 }
 
 /* ---- Opciones del jugador ------*/
 .containerB {
+  position: relative;
   display: flex;
+  left: 45vw;
   margin-top: 5px;
   flex: 0 0 5%;
-  height: 70vh;
-  align-items: center;
+  height: 65vh;
+  align-self: end;
 }
 .containerB:hover {
   flex: 0 0 20%;
-}
-.containerB__options__view{
-  align-self: center;
-  height: 10vh;
-  background: rgba(102, 51, 153, 0.5);
 }
 .containerB__options {
   width: 100%;
   border: .7vw double white;
   border-radius: 20px;
-  background: rgba(102, 51, 153, 0.5);
+  background: rgba(102, 51, 153);
   color: white;
   display: flex;
   flex-flow: column wrap;
@@ -231,16 +233,16 @@ main {
 .containerB__options__list--li button {
   background-color: transparent;
   background-size: cover;
-  height: 10vh;
-  width: 10vh;
+  height: 10vw;
+  width: 10vw;
   border: 0;
   font-size: 1.5vw;
   cursor: pointer;
   color: rgba(0, 0, 0, 0.6);
 }
 .containerB__options__list--li button:hover {
-  height: 15vh;
-  width: 15vh;
+  height: 15vw;
+  width: 15vw;
   font-size: 2vw;
   rgba(0, 0, 0, 0.8);
   padding: 0;
