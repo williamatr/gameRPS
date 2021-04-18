@@ -11,7 +11,7 @@ Proyecto para el curso base de JS de Platzi y con motivo educativo para el grupo
     Puedes probar el juego en el siguiente link!
 </p>
 <p align="center">
-(https://williamtovar.github.io/gameRPS/index.html)
+(http://gamepptls.watrdev.com)
 </p>
 
 ## Autores ✒️
