@@ -14,6 +14,23 @@ Proyecto para el curso base de JS de Platzi y con motivo educativo para el grupo
 (http://gamepptls.watrdev.com)
 </p>
 
+## Comenzando 🚀
+
+_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
+
+_Debes copiar el proyecto en tus repositorios locales utilizando el siguiente comando en tu terminal de confianza y debe ubicarte_
+_"C\:En_la_ruta\donde\guardaras\el_proyecto\"_
+
+```
+git clone https://github.com/williamtovar/gameRPS.git
+```
+
+_Si lo que quieres es clonar como tal una rama en especifico, debes ejecutar el siguiente comando_
+
+```
+git clone https://github.com/williamtovar/gameRPS.git -b [Name Rama] --single-branch
+```
+
 ## Autores ✒️
 
 * **William A. Tovar R.** - *Desarrollador* - [williamtovar](https://github.com/williamtovar)
