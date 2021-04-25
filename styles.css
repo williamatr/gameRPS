@@ -4,6 +4,8 @@
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
 }
 
+
+/*--- CSS en componentes HTML ---*/
 body {
   height: 100vh;
   margin: 0;
@@ -28,12 +30,7 @@ body {
 	}
 }
 
-.container {
-  background: greenyellow;
-  height: 100px;
-  width: 100px;
-}
-
+/*--- Header ---*/
 header {
   background: rgba(0, 0, 0, 0.5);
   color: white;
@@ -54,9 +51,6 @@ header img {
   margin-left: 2vw;
   margin-right: 2vw;
 }
-.header--title{
-  font-size: 2.5vw;
-}
 header a:link {
   color: white;
   text-decoration: none;
@@ -67,7 +61,18 @@ header a:visited {
   
 }
 
-/*--- CSS for the Footer ---*/
+/*---- MAIN ----*/
+main {
+  height: 84vh;
+  width: 100%;
+  margin-top: auto;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content:center;
+}
+
+/*--- Footer ---*/
 footer {
   background: rgba(0, 0, 0, 0.5);
   color: white;
@@ -89,43 +94,6 @@ footer p > a:visited {
 footer p > a:hover {
   color: rgba(34, 104, 235, 0.8);
 }
-.footer__autor {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: center;
-}
-.footer__autor p{
-  margin: 0;
-  padding: 0;
-}
-
-/*--------------MAIN--------------*/
-main {
-  height: 84vh;
-  width: 100%;
-  margin-top: auto;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content:center;
-}
-
-#aviso-movil-horizontal { 
-  display: none; 
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-  font-size: 3vh;
-}
-@media only all and (orientation:portrait) {
-    #wrapper { display:none; }
-    #aviso-movil-horizontal { display:flex; }
-}
-@media only all and (orientation:landscape) {
-    #aviso-movil-horizontal { display:none; }
-}
 
 @media screen and (max-width:800px) {
   body{
@@ -141,6 +109,55 @@ main {
     height: 100%;
     width: 100%;
   }
+}
+
+
+/*--- CSS en ID ---*/
+#stateB{
+  transform: rotate(180deg);
+}
+
+#aviso-movil-horizontal { 
+  display: none; 
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-size: 3vh;  
+}
+
+@media only all and (orientation:portrait) {
+    #wrapper { display:none; }
+    #aviso-movil-horizontal { display:flex; }
+}
+@media only all and (orientation:landscape) {
+    #aviso-movil-horizontal { display:none; }
+}
+
+
+
+/*--- CSS en CLASS ---*/
+.container {
+  background: greenyellow;
+  height: 100px;
+  width: 100px;
+}
+
+/*--- CSS for the Header ---*/
+.header--title{
+  font-size: 2.5vw;
+}
+
+/*--- CSS for the Footer ---*/
+.footer__autor {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer__autor p{
+  margin: 0;
+  padding: 0;
 }
 
 /*-------- INDEX -------*/
@@ -237,7 +254,7 @@ main {
   background: rgba(255, 255, 255, 0.3);
 }
 
-/*--- CSS USER A HEAD --*/
+/*--- HEAD A --*/
 .containerA__healthAndNames__userA{
   display: flex;
   flex-flow: row;
@@ -265,7 +282,7 @@ main {
   transform: skew(-25deg);
 }
 
-/*--- CSS USER B HEAD --*/
+/*--- HEAD B --*/
 .containerA__healthAndNames__userB{
   display: flex;
   flex-flow: row;
@@ -314,8 +331,46 @@ main {
   cursor: pointer;
   background: rgba(255, 255, 255, 0.1);
 }
+.containerA__bottonStateA button svg{
+  width: 10vh;
+  padding: 10px;
+}
 
-@media screen and (min-width:1920px) {
+.containerA__bottonStateB{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.containerA__bottonStateB button{
+  position: relative;
+  top: .5vh;
+  width: 90vw;
+  background: none;
+  border: none;
+  transition: all 0.5s;
+  align-self: flex-end;
+  outline: none;
+}
+.containerA__bottonStateB button:hover{
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.1);
+}
+.containerA__bottonStateB button svg{
+  width: 10vh;
+  padding: 10px;
+}
+.containerA__bottonStateB__options{
+
+}
+
+@media all and (max-width: 800px){
+  .containerA__bottonStateA button svg{
+    width: 10vh;
+    padding: 2px;
+  }
+}
+@media screen and (min-width: 1920px) {
   .containerA__healthAndNames__userA img{
     width: 6vw;
   }
@@ -341,8 +396,8 @@ main {
   }
 
 }
-/*--- From here is CHAOS --*/
 
+/*--- From here is CHAOS --*/
 .containerA__board {
   color: white;
   display: flex;

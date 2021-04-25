@@ -65,8 +65,12 @@
         </div>
 
         <!--Button of Button :B-->
-        <div class="containerA__bottonStateA" style="display: flex">
-          <button id="buttonState" type="button">
+        <div
+          class="containerA__bottonStateA"
+          id="containerA__bottonStateA"
+          style="display: flex"
+        >
+          <button id="stateA" type="button">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               x="0px"
@@ -103,8 +107,12 @@
           </button>
         </div>
 
-        <div class="containerA__bottonB" style="display: none">
-          <button id="buttonStateB" type="button">
+        <div
+          class="containerA__bottonStateB"
+          id="containerA__bottonStateB"
+          style="display: none"
+        >
+          <button id="stateB" type="button">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               x="0px"
@@ -139,7 +147,25 @@
               </g>
             </svg>
           </button>
-          <div>Contenido</div>
+          <div class="containerA__bottonStateB__options">
+            <ul class="containerB__options__list--ul">
+              <li class="containerB__options__list--li">
+                <button id="Piedra">Piedra</button>
+              </li>
+              <li class="containerB__options__list--li">
+                <button id="Papel">Papel</button>
+              </li>
+              <li class="containerB__options__list--li">
+                <button id="Tijeras">Tijeras</button>
+              </li>
+              <li class="containerB__options__list--li">
+                <button id="Lagarto">Lagarto</button>
+              </li>
+              <li class="containerB__options__list--li">
+                <button id="Spock">Spock</button>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <!--
@@ -203,6 +229,6 @@
         <a href="https://twitter.com/DevWatr" target="_blank"> Twitter </a>
       </p>
     </footer>
-    <script src="game.js"></script>
+    <script src="./game.js"></script>
   </body>
 </html>

@@ -5,8 +5,13 @@ var btn_papel = document.getElementById("Papel");
 var btn_tijeras = document.getElementById("Tijeras");
 var btn_lagarto = document.getElementById("Lagarto");
 var btn_spock = document.getElementById("Spock");
+
+//Botones del menu de seleccion
+var btn_stateA = document.getElementById("stateA");
+var btn_stateB = document.getElementById("stateB");
+
 // El boton de confirmar seleccion
-var btn_confirmar = document.getElementById("jugar");
+//var btn_confirmar = document.getElementById("jugar");
 //Las imagenes que variaran dependiendo de las selecciones
 var img_user = document.getElementById("user");
 var img_pc = document.getElementById("pc");
@@ -31,7 +36,18 @@ function init_imagenes() {
   btn_tijeras.style.backgroundImage = "url('./assets/scissorsPPTLS.png')";
   btn_lagarto.style.backgroundImage = "url('./assets/lizardPPTLS.png')";
   btn_spock.style.backgroundImage = "url('./assets/spockPPTLS.png')";
-}
+};
+
+btn_stateA.onclick = function () {
+  console.log("goli");
+  document.getElementById("containerA__bottonStateB").style.display = "flex";
+  document.getElementById("containerA__bottonStateA").style.display = "none";
+};
+btn_stateB.onclick = function () {
+  console.log("goli");
+  document.getElementById("containerA__bottonStateB").style.display = "none";
+  document.getElementById("containerA__bottonStateA").style.display = "flex";
+};
 
 //Definimos las funciones de cada boton
 btn_confirmar.onclick = function () {
@@ -42,30 +58,27 @@ btn_confirmar.onclick = function () {
   game(Opcion_jugador, Opcion_pc);
 };
 
+//OnClick --- Buttons Options
 btn_piedra.onclick = function () {
   Opcion_jugador = 0;
   img_user.src = "./assets/rockPPTLS.png";
   btn_confirmar.disabled = false;
 };
-
 btn_papel.onclick = function () {
   Opcion_jugador = 1;
   img_user.src = "./assets/paperPPTLS.png";
   btn_confirmar.disabled = false;
 };
-
 btn_tijeras.onclick = function () {
   Opcion_jugador = 2;
   img_user.src = "./assets/scissorsPPTLS.png";
   btn_confirmar.disabled = false;
 };
-
 btn_lagarto.onclick = function () {
   Opcion_jugador = 3;
   img_user.src = "./assets/lizardPPTLS.png";
   btn_confirmar.disabled = false;
 };
-
 btn_spock.onclick = function () {
   Opcion_jugador = 4;
   img_user.src = "./assets/spockPPTLS.png";
@@ -76,7 +89,7 @@ btn_spock.onclick = function () {
 //aleatorio entre el 1 y el 5
 function num_aleatorio() {
   return parseInt(Math.random() * 5);
-}
+};
 
 // DEfinimos la funcion para mostrar la opcion del PC
 function display_opcion_pc(opcion) {
@@ -91,7 +104,7 @@ function display_opcion_pc(opcion) {
   } else {
     img_pc.src = "./assets/spockPPTLS.png";
   }
-}
+};
 
 //Defino las Reglas del juego
 function game(opcion_jugador, opcion_pc) {
@@ -171,4 +184,4 @@ function game(opcion_jugador, opcion_pc) {
     marcador_pc++;
     document.getElementById("puntos_pc").innerText = marcador_pc;
   }
-}
+};
