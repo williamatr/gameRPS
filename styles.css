@@ -1,5 +1,5 @@
 * {
-  font-family: "Times New Roman", Times, serif;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -125,6 +125,7 @@ main {
   background: rgba(255,255, 255, 0.2);
   display: flex;
   flex-flow: column;
+  height: 90%;
   color: white;
   align-items: center;
   padding: 20px;
@@ -137,7 +138,7 @@ main {
   font-size: 2.2vw;
 }
 .instructions__container__rules img {
-  width: 50%;
+  width: 30vw;
 }
 .instructions__container__button--continue {
   height: 10vh;
@@ -176,26 +177,29 @@ main {
   justify-content: center;
   align-items: center;
 }
-
-/*--- CSS USER B HEAD --*/
 .containerA__healthAndNames{
   display: flex;
-  position: relative;
-  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
+  position: relative;
+  flex-direction: row;  
+  width: 89vw;
   bottom: 2vh;
   padding: .5vw;
   background: rgba(255, 255, 255, 0.3);
 }
+
+/*--- CSS USER A HEAD --*/
 .containerA__healthAndNames__userA{
   display: flex;
   flex-flow: row;
-  justify-content: start;
+  height: 100%;
 }
 .containerA__healthAndNames__userA img{
-  width: 8vw;
+  align-self: center;
+  width: auto;
   padding: 10px;
-  height: auto;
+  height: 7vw;
 }
 .containerA__healthAndNAme__userA__divBar{
   display: flex;
@@ -203,8 +207,12 @@ main {
   align-items: flex-start;
 }
 .containerA__healthAndNAme__userA__divBar--healthBar{
+  display: flex;
+  justify-content: center;
+  align-items:center;
   border: 1px solid black;
-  width: 30vw;
+  width: 30vw;  
+  height: 5vh;
   background: rgba(255, 217, 0, 0.8);
   transform: skew(-25deg);
 }
@@ -215,9 +223,10 @@ main {
   flex-flow: row;
 }
 .containerA__healthAndNames__userB img{
-  width: 9vw;
+  align-self: center;
+  width: auto;
   padding: 10px;
-  height: auto;
+  height: 7.5vw;
 }
 .containerA__healthAndNAme__userB__divBar{
   display: flex;
@@ -225,8 +234,12 @@ main {
   align-items: flex-end;
 }
 .containerA__healthAndNAme__userB__divBar--healthBar{
+  display: flex;
+  justify-content: center;
+  align-items:center;
   border: 1px solid black;
   width: 30vw;
+  height: 5vh;
   background: rgba(255, 217, 0, 0.8);
   transform: skew(25deg);
 }
@@ -249,7 +262,32 @@ main {
   background: rgba(255, 255, 255, 0.1);
 }
 
+@media screen and (min-width:1920px) {
+  .containerA__healthAndNames__userA img{
+    width: 6vw;
+  }
+  .containerA__healthAndNAme__userA__divBar{
+    font-size: 2.5vw;
+  }
+  .containerA__healthAndNAme__userA__divBar--healthBar{    
+    height:6vh;
+  }
 
+  .containerA__healthAndNames__userB img{
+    width: 8vw;
+  }
+  .containerA__healthAndNAme__userB__divBar{
+    font-size: 2.5vw;
+  }
+  .containerA__healthAndNAme__userB__divBar--healthBar{    
+    height:6vh;
+  }
+
+  .containerA__healthAndNames__versus img{
+    width: 10vw;
+  }
+
+}
 /*--- From here is CHAOS --*/
 
 .containerA__board {
