@@ -113,12 +113,15 @@ main {
 
 #aviso-movil-horizontal { 
   display: none; 
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   color: white;
   font-size: 3vh;
 }
 @media only all and (orientation:portrait) {
     #wrapper { display:none; }
-    #aviso-movil-horizontal { display:block; }
+    #aviso-movil-horizontal { display:flex; }
 }
 @media only all and (orientation:landscape) {
     #aviso-movil-horizontal { display:none; }
