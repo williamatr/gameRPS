@@ -111,6 +111,35 @@ main {
   justify-content:center;
 }
 
+#aviso-movil-horizontal { 
+  display: none; 
+  color: white;
+  font-size: 3vh;
+}
+@media only screen and (orientation:portrait) {
+    #wrapper { display:none; }
+    #aviso-movil-horizontal { display:block; }
+}
+@media only screen and (orientation:landscape) {
+    #aviso-movil-horizontal { display:none; }
+}
+
+@media screen and (max-width:800px) {
+  body{
+    display: flex;
+  }
+  header{
+    display: none;
+  }
+  footer{
+    display: none;
+  }
+  main{    
+    height: 100%;
+    width: 100%;
+  }
+}
+
 /*-------- INDEX -------*/
 .index__container button {
   height: 12vh;
@@ -170,7 +199,9 @@ main {
 }
 
 @media screen and (min-width:1920px) {
-  .instructions__container
+  .instructions__container{
+
+  }
 }
 /*--------------------------Tablero de juego ------*/
 .containerA {
