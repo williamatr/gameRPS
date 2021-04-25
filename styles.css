@@ -112,6 +112,7 @@ main {
   border-radius: 50px;
   font-size: 2vw;
   transition: all 0.5s;
+  outline: none;
 }
 .index__container button:hover {
   background: rgb(255, 255, 255,0.1);
@@ -149,6 +150,7 @@ main {
   border-radius: 50px;
   font-size: 2vw;
   transition: all 0.5s;
+  outline: none;
 }
 .instructions__container__button--continue:hover {
   background: rgb(255, 255, 255, 0.1);
@@ -256,6 +258,7 @@ main {
   border: none;
   transition: all 0.5s;
   align-self: flex-end;
+  outline: none;
 }
 .containerA__bottonStateA button:hover{
   cursor: pointer;
