@@ -1,12 +1,13 @@
 * {
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
 }
 
 body {
   height: 100vh;
+  margin: 0;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -90,8 +91,13 @@ footer p > a:hover {
 }
 .footer__autor {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: column;
   align-items: center;
+  justify-content: center;
+}
+.footer__autor p{
+  margin: 0;
+  padding: 0;
 }
 
 /*--------------MAIN--------------*/
@@ -182,10 +188,11 @@ main {
 }
 .containerA__healthAndNames{
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
+  align-items: space-around;
   position: relative;
   flex-direction: row;  
+  height: 15vh;
   width: 89vw;
   bottom: 1vh;
   padding: .5vw;
@@ -278,7 +285,7 @@ main {
   }
 
   .containerA__healthAndNames__userB img{
-    width: 8vw;
+    width: 9vw;
   }
   .containerA__healthAndNAme__userB__divBar{
     font-size: 2.5vw;
