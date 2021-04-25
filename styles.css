@@ -97,12 +97,15 @@ footer p > a:hover {
 /*--------------MAIN--------------*/
 main {
   height: 84vh;
+  width: 100%;
   margin-top: auto;
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content:center;
 }
+
+/*-------- INDEX -------*/
 .index__container button {
   height: 12vh;
   width: 25vw;
@@ -142,8 +145,8 @@ main {
   width: 30vw;
 }
 .instructions__container__button--continue {
-  height: 10vh;
-  width: 20vw;
+  height: 8vh;
+  width: 15vw;
   background: none;
   color: white;
   border: 1px solid;
@@ -166,10 +169,8 @@ main {
   font-size: 3vw;
   font-weight: bold;
   text-align: center;
-  margin-right: 6vw;
   width: 90vw;
-  height: 60vh;
-  padding: 10px;
+  height: 70vh;
   border: .7vw double white;
   border-radius: 20px;
   background: rgba(102, 51, 153, 0.5);
@@ -186,7 +187,7 @@ main {
   position: relative;
   flex-direction: row;  
   width: 89vw;
-  bottom: 2vh;
+  bottom: 1vh;
   padding: .5vw;
   background: rgba(255, 255, 255, 0.3);
 }
@@ -252,7 +253,7 @@ main {
 
 .containerA__bottonStateA button{
   position: relative;
-  top: 2vh;
+  top: .5vh;
   width: 90vw;
   background: none;
   border: none;
