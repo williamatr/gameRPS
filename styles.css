@@ -8,8 +8,23 @@
 body {
   height: 100vh;
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-flow: column nowrap;
-  background: rgba(102, 51, 153, 0.5);
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 20s ease infinite;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 .container {
@@ -19,11 +34,12 @@ body {
 }
 
 header {
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.5);
   color: white;
-  height: 3rem;
+  height: 8vh;
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 header a {
   display: flex;
@@ -38,7 +54,7 @@ header img {
   margin-right: 2vw;
 }
 .header--title{
-  font-size: 2vw;
+  font-size: 2.5vw;
 }
 header a:link {
   color: white;
@@ -47,11 +63,15 @@ header a:link {
 header a:visited {
   color: white;
   text-decoration: none;
+  
 }
+
+/*--- CSS for the Footer ---*/
 footer {
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.5);
   color: white;
-  height: 5rem;
+  height: 8vh;
+  width: 100%;
   margin-top: auto;
   font-size: 2vw;
   display: flex;
@@ -65,8 +85,8 @@ footer p > a:link {
 footer p > a:visited {
   color: rgb(255, 255, 255, 0.5);
 }
-footer p > a:active {
-  color: rgb(102, 51, 153);
+footer p > a:hover {
+  color: rgba(34, 104, 235, 0.8);
 }
 .footer__autor {
   display: flex;
@@ -74,31 +94,35 @@ footer p > a:active {
   align-items: center;
 }
 
+/*--------------MAIN--------------*/
 main {
+  height: 84vh;
   margin-top: auto;
   display: flex;
-  flex-flow: row;
+  flex-flow: column;
   align-items: center;
   justify-content:center;
 }
 .index__container button {
   height: 12vh;
   width: 25vw;
-  background: rgb(102, 51, 153);
+  background: none;
   color: white;
   border: 1px solid;
   border-radius: 50px;
   font-size: 2vw;
-  transition: font-size 0.5s;
+  transition: all 0.5s;
 }
 .index__container button:hover {
-  background: rgb(95, 29, 160);
+  background: rgb(255, 255, 255,0.1);
   border: 2px solid;
   font-size: 3vw;
   cursor: pointer;
 }
+
+/*----- CSS of the instructions ---*/
 .instructions__container {
-  background: rgba(102, 51, 153, 0.5);
+  background: rgba(255,255, 255, 0.2);
   display: flex;
   flex-flow: column;
   color: white;
@@ -118,19 +142,20 @@ main {
 .instructions__container__button--continue {
   height: 10vh;
   width: 20vw;
-  background: rgb(102, 51, 153);
+  background: none;
   color: white;
   border: 1px solid;
   border-radius: 50px;
   font-size: 2vw;
-  transition: font-size 0.5s;
+  transition: all 0.5s;
 }
 .instructions__container__button--continue:hover {
-  background: rgb(95, 29, 160);
+  background: rgb(255, 255, 255, 0.1);
   border: 1px solid;
   cursor: pointer;
   font-size: 3vw;
 }
+
 /*--------------------------Tablero de juego ------*/
 .containerA {
   position: absolute;
@@ -139,13 +164,6 @@ main {
   font-weight: bold;
   text-align: center;
   margin-right: 6vw;
-}
-.containerA__result__box img{
-  height: 10vh;
-  margin-bottom: 1vh;
-  border-radius: 10px;
-}
-.containerA__board__result {
   width: 90vw;
   height: 60vh;
   padding: 10px;
@@ -158,6 +176,82 @@ main {
   justify-content: center;
   align-items: center;
 }
+
+/*--- CSS USER B HEAD --*/
+.containerA__healthAndNames{
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  bottom: 2vh;
+  padding: .5vw;
+  background: rgba(255, 255, 255, 0.3);
+}
+.containerA__healthAndNames__userA{
+  display: flex;
+  flex-flow: row;
+  justify-content: start;
+}
+.containerA__healthAndNames__userA img{
+  width: 8vw;
+  padding: 10px;
+  height: auto;
+}
+.containerA__healthAndNAme__userA__divBar{
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+}
+.containerA__healthAndNAme__userA__divBar--healthBar{
+  border: 1px solid black;
+  width: 30vw;
+  background: rgba(255, 217, 0, 0.8);
+  transform: skew(-25deg);
+}
+
+/*--- CSS USER B HEAD --*/
+.containerA__healthAndNames__userB{
+  display: flex;
+  flex-flow: row;
+}
+.containerA__healthAndNames__userB img{
+  width: 9vw;
+  padding: 10px;
+  height: auto;
+}
+.containerA__healthAndNAme__userB__divBar{
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+}
+.containerA__healthAndNAme__userB__divBar--healthBar{
+  border: 1px solid black;
+  width: 30vw;
+  background: rgba(255, 217, 0, 0.8);
+  transform: skew(25deg);
+}
+
+.containerA__healthAndNames__versus img{
+  width: 11vw;
+}
+
+.containerA__bottonStateA button{
+  position: relative;
+  top: 2vh;
+  width: 90vw;
+  background: none;
+  border: none;
+  transition: all 0.5s;
+  align-self: flex-end;
+}
+.containerA__bottonStateA button:hover{
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+
+/*--- From here is CHAOS --*/
+
 .containerA__board {
   color: white;
   display: flex;
@@ -173,7 +267,7 @@ main {
   width: 20vw;
 }
 .containerA__board__vs--img img{
-  width: 20vw;
+  
 }
 .containerA__board__user--img_select {
   padding: 1vw;
@@ -190,13 +284,12 @@ main {
 
 /* ---- Opciones del jugador ------*/
 .containerB {
-  position: relative;
   display: flex;
-  left: 45vw;
+  position: relative;
   margin-top: 5px;
   flex: 0 0 5%;
   height: 65vh;
-  align-self: end;
+  top: 35vh;
 }
 .containerB:hover {
   flex: 0 0 20%;
@@ -208,9 +301,8 @@ main {
   background: rgba(102, 51, 153);
   color: white;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: row;
   justify-content: center;
-  align-items: center;
   margin-bottom: 1vh;
 }
 
@@ -222,10 +314,11 @@ main {
   display: flex;
   width: 100%;
   list-style: none;
-  flex-flow: column;  
+  flex-flow: row;
   justify-content: space-around;
-  justify-content: center;
+  justify-content: center;  
 }
+
 .containerB__options__list--li {
   justify-content: center;
   align-items: center;

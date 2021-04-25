@@ -11,7 +11,7 @@ var btn_confirmar = document.getElementById("jugar");
 var img_user = document.getElementById("user");
 var img_pc = document.getElementById("pc");
 // y el resultado
-var img_result = document.getElementById("result");
+let img_result = document.getElementById("result");
 // Defino los marcadores
 var marcador_user = document.getElementById("puntos_user").innerText;
 var marcador_pc = document.getElementById("puntos_pc").innerText;
@@ -23,7 +23,7 @@ var Opcion_pc;
 //Queda mas corto que en css
 init_imagenes();
 
-// Hacemos la funcion para poners las imagenes correspondientes 
+// Hacemos la funcion para poners las imagenes correspondientes
 //en nuestros botones
 function init_imagenes() {
   btn_piedra.style.backgroundImage = " url('./assets/rockPPTLS.png')";
@@ -72,8 +72,8 @@ btn_spock.onclick = function () {
   btn_confirmar.disabled = false;
 };
 
-//Definimos la funcion que generara un numero 
-//aleatorio entre el 1 y el 5 
+//Definimos la funcion que generara un numero
+//aleatorio entre el 1 y el 5
 function num_aleatorio() {
   return parseInt(Math.random() * 5);
 }
@@ -93,47 +93,22 @@ function display_opcion_pc(opcion) {
   }
 }
 
-
-//Defino las Reglas del juego 
+//Defino las Reglas del juego
 function game(opcion_jugador, opcion_pc) {
-  var escenario_1; //Piedra 0 gana Tijeras 2
-  var escenario_2; //Papel 1 gana Piedra 0
-  var escenario_3; //Tijeras 2 gana Papel 1
-  var escenario_4; //Piedra 0 gana Lagarto 3
-  var escenario_5; //Papel 1 gana Spock 4
-  var escenario_6; //Tijeras 2 gana Lagarto 3
-  var escenario_7; //Lagarto 3 gana Spock 4
-  var escenario_8; //Lagarto 3 gana Papel 1
-  var escenario_9; //Spock 4 gana Tijeras 2
-  var escenario_10; //Spock 4 gana Piedra 0
-  var empate; /*---------------Con Switch-----------------*/
-  /* --------------------Con IF -------------------
-  if (opcion_jugador === opcion_pc) {
-    empate = true;
-  } else if (opcion_jugador === 0 && opcion_pc === 2) {
-    escenario_1 = true;
-  } else if (opcion_jugador === 1 && opcion_pc === 0) {
-    escenario_2 = true;
-  } else if (opcion_jugador === 2 && opcion_pc === 1) {
-    escenario_3 = true;
-  } else if (opcion_jugador === 0 && opcion_pc === 3) {
-    escenario_4 = true;
-  } else if (opcion_jugador === 1 && opcion_pc === 4) {
-    escenario_5 = true;
-  } else if (opcion_jugador === 2 && opcion_pc === 3) {
-    escenario_6 = true;
-  } else if (opcion_jugador === 3 && opcion_pc === 4) {
-    escenario_7 = true;
-  } else if (opcion_jugador === 3 && opcion_pc === 1) {
-    escenario_8 = true;
-  } else if (opcion_jugador === 4 && opcion_pc === 2) {
-    escenario_9 = true;
-  } else if (opcion_jugador === 4 && opcion_pc === 0) {
-    escenario_10 = true;
-  }
-*/ switch (
-    true
-  ) {
+  let escenario_1; //Piedra 0 gana Tijeras 2
+  let escenario_2; //Papel 1 gana Piedra 0
+  let escenario_3; //Tijeras 2 gana Papel 1
+  let escenario_4; //Piedra 0 gana Lagarto 3
+  let escenario_5; //Papel 1 gana Spock 4
+  let escenario_6; //Tijeras 2 gana Lagarto 3
+  let escenario_7; //Lagarto 3 gana Spock 4
+  let escenario_8; //Lagarto 3 gana Papel 1
+  let escenario_9; //Spock 4 gana Tijeras 2
+  let escenario_10; //Spock 4 gana Piedra 0
+  let empate;
+
+  /*---------------Con Switch-----------------*/
+  switch (true) {
     case opcion_jugador === opcion_pc:
       empate = true;
       break;
@@ -168,9 +143,9 @@ function game(opcion_jugador, opcion_pc) {
       escenario_10 = true;
       break;
   }
-//// Una vez determinado el escenario que ha sucedido procedemos 
-//a sumar los puntos y mostrarle al usuario su resultado
-// (Si Gano, perio o fue empate)
+  //// Una vez determinado el escenario que ha sucedido procedemos
+  //a sumar los puntos y mostrarle al usuario su resultado
+  // (Si Gano, perio o fue empate)
   if (
     escenario_1 ||
     escenario_2 ||
@@ -197,5 +172,3 @@ function game(opcion_jugador, opcion_pc) {
     document.getElementById("puntos_pc").innerText = marcador_pc;
   }
 }
-
-
