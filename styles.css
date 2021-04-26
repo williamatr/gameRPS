@@ -1,9 +1,8 @@
 * {
   margin: 0;
   padding: 0;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
-
 
 /*--- CSS en componentes HTML ---*/
 body {
@@ -15,19 +14,19 @@ body {
   justify-content: center;
   flex-flow: column nowrap;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-	animation: gradient 20s ease infinite;
+  background-size: 400% 400%;
+  animation: gradient 20s ease infinite;
 }
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /*--- Header ---*/
@@ -58,7 +57,6 @@ header a:link {
 header a:visited {
   color: white;
   text-decoration: none;
-  
 }
 
 /*---- MAIN ----*/
@@ -69,7 +67,7 @@ main {
   display: flex;
   flex-flow: column;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
 }
 
 /*--- Footer ---*/
@@ -95,46 +93,49 @@ footer p > a:hover {
   color: rgba(34, 104, 235, 0.8);
 }
 
-@media screen and (max-width:800px) {
-  body{
+@media screen and (max-width: 800px) {
+  body {
     display: flex;
   }
-  header{
+  header {
     display: none;
   }
-  footer{
+  footer {
     display: none;
   }
-  main{    
+  main {
     height: 100%;
     width: 100%;
   }
 }
 
-
 /*--- CSS en ID ---*/
-#stateB{
+#stateB {
   transform: rotate(180deg);
 }
 
-#aviso-movil-horizontal { 
-  display: none; 
+#aviso-movil-horizontal {
+  display: none;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
-  font-size: 3vh;  
+  font-size: 3vh;
 }
 
-@media only all and (orientation:portrait) {
-    #wrapper { display:none; }
-    #aviso-movil-horizontal { display:flex; }
+@media only all and (orientation: portrait) {
+  #wrapper {
+    display: none;
+  }
+  #aviso-movil-horizontal {
+    display: flex;
+  }
 }
-@media only all and (orientation:landscape) {
-    #aviso-movil-horizontal { display:none; }
+@media only all and (orientation: landscape) {
+  #aviso-movil-horizontal {
+    display: none;
+  }
 }
-
-
 
 /*--- CSS en CLASS ---*/
 .container {
@@ -144,7 +145,7 @@ footer p > a:hover {
 }
 
 /*--- CSS for the Header ---*/
-.header--title{
+.header--title {
   font-size: 2.5vw;
 }
 
@@ -155,7 +156,7 @@ footer p > a:hover {
   align-items: center;
   justify-content: center;
 }
-.footer__autor p{
+.footer__autor p {
   margin: 0;
   padding: 0;
 }
@@ -173,7 +174,7 @@ footer p > a:hover {
   outline: none;
 }
 .index__container button:hover {
-  background: rgb(255, 255, 255,0.1);
+  background: rgb(255, 255, 255, 0.1);
   border: 2px solid;
   font-size: 3vw;
   cursor: pointer;
@@ -181,7 +182,7 @@ footer p > a:hover {
 
 /*----- CSS of the instructions ---*/
 .instructions__container {
-  background: rgba(255,255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.2);
   display: flex;
   flex-flow: column;
   height: 90%;
@@ -218,9 +219,8 @@ footer p > a:hover {
   font-size: 3vw;
 }
 
-@media screen and (min-width:1920px) {
-  .instructions__container{
-
+@media screen and (min-width: 1920px) {
+  .instructions__container {
   }
 }
 /*--------------------------Tablero de juego ------*/
@@ -232,7 +232,7 @@ footer p > a:hover {
   text-align: center;
   width: 90vw;
   height: 70vh;
-  border: .7vw double white;
+  border: 0.7vw double white;
   border-radius: 20px;
   background: rgba(102, 51, 153, 0.5);
   color: white;
@@ -241,163 +241,18 @@ footer p > a:hover {
   justify-content: center;
   align-items: center;
 }
-.containerA__healthAndNames{
+.containerA__healthAndNames {
   display: flex;
   justify-content: center;
   align-items: space-around;
   position: relative;
-  flex-direction: row;  
+  flex-direction: row;
   height: 15vh;
   width: 89vw;
   bottom: 1vh;
-  padding: .5vw;
-  background: rgba(255, 255, 255, 0.3);
+  padding: 0.5vw;
+  background: rgba(255, 255, 255, 0.2);
 }
-
-/*--- HEAD A --*/
-.containerA__healthAndNames__userA{
-  display: flex;
-  flex-flow: row;
-  height: 100%;
-}
-.containerA__healthAndNames__userA img{
-  align-self: center;
-  width: auto;
-  padding: 10px;
-  height: 7vw;
-}
-.containerA__healthAndNAme__userA__divBar{
-  display: flex;
-  flex-flow: column;
-  align-items: flex-start;
-}
-.containerA__healthAndNAme__userA__divBar--healthBar{
-  display: flex;
-  justify-content: center;
-  align-items:center;
-  border: 1px solid black;
-  width: 30vw;  
-  height: 5vh;
-  background: rgba(255, 217, 0, 0.8);
-  transform: skew(-25deg);
-}
-
-/*--- HEAD B --*/
-.containerA__healthAndNames__userB{
-  display: flex;
-  flex-flow: row;
-}
-.containerA__healthAndNames__userB img{
-  align-self: center;
-  width: auto;
-  padding: 10px;
-  height: 7.5vw;
-}
-.containerA__healthAndNAme__userB__divBar{
-  display: flex;
-  flex-flow: column;
-  align-items: flex-end;
-}
-.containerA__healthAndNAme__userB__divBar--healthBar{
-  display: flex;
-  justify-content: center;
-  align-items:center;
-  border: 1px solid black;
-  width: 30vw;
-  height: 5vh;
-  background: rgba(255, 217, 0, 0.8);
-  transform: skew(25deg);
-}
-
-.containerA__healthAndNames__versus{
-  display: flex;
-}
-.containerA__healthAndNames__versus img{  
-  align-self: center;
-  width: 11vw;
-}
-
-.containerA__bottonStateA button{
-  position: relative;
-  top: .5vh;
-  width: 90vw;
-  background: none;
-  border: none;
-  transition: all 0.5s;
-  align-self: flex-end;
-  outline: none;
-}
-.containerA__bottonStateA button:hover{
-  cursor: pointer;
-  background: rgba(255, 255, 255, 0.1);
-}
-.containerA__bottonStateA button svg{
-  width: 10vh;
-  padding: 10px;
-}
-
-.containerA__bottonStateB{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.containerA__bottonStateB button{
-  position: relative;
-  top: .5vh;
-  width: 90vw;
-  background: none;
-  border: none;
-  transition: all 0.5s;
-  align-self: flex-end;
-  outline: none;
-}
-.containerA__bottonStateB button:hover{
-  cursor: pointer;
-  background: rgba(255, 255, 255, 0.1);
-}
-.containerA__bottonStateB button svg{
-  width: 10vh;
-  padding: 10px;
-}
-.containerA__bottonStateB__options{
-
-}
-
-@media all and (max-width: 800px){
-  .containerA__bottonStateA button svg{
-    width: 10vh;
-    padding: 2px;
-  }
-}
-@media screen and (min-width: 1920px) {
-  .containerA__healthAndNames__userA img{
-    width: 6vw;
-  }
-  .containerA__healthAndNAme__userA__divBar{
-    font-size: 2.5vw;
-  }
-  .containerA__healthAndNAme__userA__divBar--healthBar{    
-    height:6vh;
-  }
-
-  .containerA__healthAndNames__userB img{
-    width: 9vw;
-  }
-  .containerA__healthAndNAme__userB__divBar{
-    font-size: 2.5vw;
-  }
-  .containerA__healthAndNAme__userB__divBar--healthBar{    
-    height:6vh;
-  }
-
-  .containerA__healthAndNames__versus img{
-    width: 10vw;
-  }
-
-}
-
-/*--- From here is CHAOS --*/
 .containerA__board {
   color: white;
   display: flex;
@@ -406,145 +261,239 @@ footer p > a:hover {
   align-items: center;
   flex: 1;
 }
-.containerA__board__user--img img{
-  width: 20vw;
-}
-.containerA__board__pc--img img {
-  width: 20vw;
-}
-.containerA__board__vs--img img{
-  
-}
-.containerA__board__user--img_select {
-  padding: 1vw;
-}
-.containerA__board__user--img_select img {
-  width: 10vw;
-}
-.containerA__board__pc--img_select {
-  padding: 1vw;
-}
-.containerA__board__pc--img_select img {
-  width: 10vw;
-}
 
-/* ---- Opciones del jugador ------*/
-.containerB {
-  display: flex;
-  position: relative;
-  margin-top: 5px;
-  flex: 0 0 5%;
-  height: 65vh;
-  top: 35vh;
-}
-.containerB:hover {
-  flex: 0 0 20%;
-}
-.containerB__options {
-  width: 100%;
-  border: .7vw double white;
-  border-radius: 20px;
-  background: rgba(102, 51, 153);
-  color: white;
+/*--- HEAD A --*/
+.containerA__healthAndNames__userA {
   display: flex;
   flex-flow: row;
+  height: 100%;
+}
+.containerA__healthAndNames__userA img {
+  align-self: center;
+  width: auto;
+  padding: 10px;
+  height: 7vw;
+}
+.containerA__healthAndNAme__userA__divBar {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+}
+.containerA__healthAndNAme__userA__divBar--healthBar {
+  display: flex;
   justify-content: center;
-  margin-bottom: 1vh;
+  align-items: center;
+  border: 1px solid black;
+  width: 30vw;
+  height: 5vh;
+  background: rgba(255, 217, 0, 0.8);
+  transform: skew(-25deg);
 }
 
-.containerB__options__list {
-  align-items: center;
-  width: 100%;
+/*--- HEAD B --*/
+.containerA__healthAndNames__userB {
+  display: flex;
+  flex-flow: row;
 }
-.containerB__options__list--ul {
+.containerA__healthAndNames__userB img {
+  align-self: center;
+  width: auto;
+  padding: 10px;
+  height: 7.5vw;
+}
+.containerA__healthAndNAme__userB__divBar {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+}
+.containerA__healthAndNAme__userB__divBar--healthBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  width: 30vw;
+  height: 5vh;
+  background: rgba(255, 217, 0, 0.8);
+  transform: skew(25deg);
+}
+
+.containerA__healthAndNames__versus {
+  display: flex;
+}
+.containerA__healthAndNames__versus img {
+  align-self: center;
+  width: 11vw;
+}
+
+.containerA__board__user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.containerA__board__user img {
+  display: flex;
+  position: absolute;
+  top: 25vh;
+  right: 57vw;
+  width: 15vw;
+}
+.containerA__board__pc img {
+  display: flex;
+  position: absolute;
+  top: 25vh;
+  right: 18vw;
+  width: 15vw;
+}
+.containerA__board__confirm button {
+  position: relative;
+  z-index: 1;
+  font-size: 4vh;
+  height: 10rem;
+  width: 20rem;
+  margin-top: 10vh;
+  border-radius: 4vh;
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+  transition: all 0.5s;
+}
+.containerA__board__confirm button:hover {
+  font-size: 5vh;
+  height: 12rem;
+  width: 22rem;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.containerA__bottonStateA button {
+  position: relative;
+  top: 0.5vh;
+  width: 90vw;
+  background: none;
+  border: none;
+  transition: all 0.5s;
+  align-self: flex-end;
+  outline: none;
+}
+.containerA__bottonStateA button:hover {
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.1);
+}
+.containerA__bottonStateA button svg {
+  width: 10vh;
+  padding: 10px;
+}
+
+.containerA__bottonStateB {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.1);
+}
+.containerA__bottonStateB button {
+  position: relative;
+  top: 0.5vh;
+  width: 90vw;
+  background: none;
+  border: none;
+  border-bottom: 2px solid white;
+  transition: all 0.5s;
+  align-self: flex-end;
+  outline: none;
+}
+.containerA__bottonStateB button:hover {
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.2);
+}
+.containerA__bottonStateB button svg {
+  width: 10vh;
+  padding: 10px;
+}
+.containerA__bottonStateB__options {
+  max-height: 30vh;
+  min-height: 20vh;
+  padding-bottom: 1.5vh;
+}
+
+.containerA__bottonStateB__options--ul {
   display: flex;
   width: 100%;
   list-style: none;
   flex-flow: row;
   justify-content: space-around;
-  justify-content: center;  
+  justify-content: center;
 }
 
-.containerB__options__list--li {
+.containerA__bottonStateB__options--li {
   justify-content: center;
   align-items: center;
 }
-.containerB__options__list--li button {
+.containerA__bottonStateB__options--li button {
   background-color: transparent;
   background-size: cover;
   height: 10vw;
   width: 10vw;
   border: 0;
   font-size: 1.5vw;
-  cursor: pointer;
   color: rgba(0, 0, 0, 0.6);
 }
-.containerB__options__list--li button:hover {
-  height: 15vw;
-  width: 15vw;
+.containerA__bottonStateB__options--li button:hover {
+  height: 12vw;
+  width: 12vw;
   font-size: 2vw;
-  rgba(0, 0, 0, 0.8);
-  padding: 0;
-  margin: 0;
-}
-.containerB__options__button {
-  margin-top: 5vw;
-  display: fixed;
-}
-.containerB__options__button--confirm {
-  height: 6vw;
-  width: 15vw;
-  border-radius: 10px;
-  border: 1px solid white;  
-  font-size: 1.8vw;
-  background: rgba(102, 51, 153, 0.5);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   cursor: pointer;
- 
-  transition: font-size 0.3s;
-}
-.containerB__options__button--confirm:hover {
-  font-size: 2.2vw;
-  background: rgba(102, 51, 153, 0.8);
-  border: 2px solid white;
+  background-color: transparent;
+  background-size: cover;
+  color: rgba(0, 0, 0, 0.8);
 }
 
-@media only screen and (min-width: 1200px) {
-  main {
-    flex-flow: column;
+@media all and (max-width: 800px) {
+  .containerA__bottonStateA button svg {
+    width: 10vh;
+    padding: 2px;
   }
-  .containerB__options__button {
-    margin-top: 5px;
+}
+@media screen and (min-width: 1920px) {
+  .containerA__healthAndNames__userA img {
+    width: 6vw;
   }
-  .containerB__options__button--confirm {
-    height: 80px;
-    width: 15vw; 
-    font-size: 30px;
+  .containerA__healthAndNAme__userA__divBar {
+    font-size: 2.5vw;
   }
-  .containerB__options__button--confirm:hover {
-    font-size: 35px;
+  .containerA__healthAndNAme__userA__divBar--healthBar {
+    height: 6vh;
   }
-  .containerB__options__list--li button {
-    height: 170px;
-    width: 170px;
-    font-size: 25px;
+
+  .containerA__healthAndNames__userB img {
+    width: 9vw;
   }
-  .containerB__options__list--li button:hover {
-    height: 200px;
-    width: 200px;
-    font-size: 30px;    
+  .containerA__healthAndNAme__userB__divBar {
+    font-size: 2.5vw;
   }
-  .containerB__options__list {
-    height: 250px;
+  .containerA__healthAndNAme__userB__divBar--healthBar {
+    height: 6vh;
   }
-  .containerB__options {
-    height: 15vw;
-    width: 95vw;
-  } 
-  .containerB__options__list--ul {    
-    flex-flow: row;
+
+  .containerA__healthAndNames__versus img {
+    width: 10vw;
+  }
+}
+@media all and (max-height: 900px) {
+  .containerA__healthAndNames {
+    position: absolute;
+    bottom: 54vh;
+  }
+  .containerA__board__confirm button {
+    position: relative;
+    z-index: 1;
+    font-size: 4vh;
+    height: 10rem;
+    width: 20rem;
+    margin-top: 30vh;
+    border-radius: 4vh;
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    transition: all 0.5s;
   }
 }

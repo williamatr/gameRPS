@@ -47,15 +47,31 @@
           </div>
         </div>
         <!--Board or Mid space-->
+        <div
+          id="divJugar"
+          class="containerA__board__confirm"
+          style="display: none"
+        >
+          <button
+            id="jugar"
+            class="containerA__board__confirm--button"
+            onclick="Game()"
+            type="button"
+          >
+            Confirmar
+          </button>
+        </div>
+
         <div class="containerA__board">
-          <div class="containerA__board__user--img_select">
+          <div class="containerA__board__user">
             <img
               id="user"
               src="./assets/transparent.png"
               alt="imagen seleccionada user"
             />
           </div>
-          <div class="containerA__board__pc--img_select">
+
+          <div class="containerA__board__pc">
             <img
               id="pc"
               src="./assets/transparent.png"
@@ -148,21 +164,23 @@
             </svg>
           </button>
           <div class="containerA__bottonStateB__options">
-            <ul class="containerB__options__list--ul">
-              <li class="containerB__options__list--li">
-                <button id="Piedra">Piedra</button>
+            <ul class="containerA__bottonStateB__options--ul">
+              <li class="containerA__bottonStateB__options--li">
+                <button id="Piedra" type="button">
+                  Piedra
+                </button>
               </li>
-              <li class="containerB__options__list--li">
-                <button id="Papel">Papel</button>
+              <li class="containerA__bottonStateB__options--li">
+                <button id="Papel" type="button">Papel</button>
               </li>
-              <li class="containerB__options__list--li">
-                <button id="Tijeras">Tijeras</button>
+              <li class="containerA__bottonStateB__options--li">
+                <button id="Tijeras" type="button">Tijeras</button>
               </li>
-              <li class="containerB__options__list--li">
-                <button id="Lagarto">Lagarto</button>
+              <li class="containerA__bottonStateB__options--li">
+                <button id="Lagarto" type="button">Lagarto</button>
               </li>
-              <li class="containerB__options__list--li">
-                <button id="Spock">Spock</button>
+              <li class="containerA__bottonStateB__options--li">
+                <button id="Spock" type="button">Spock</button>
               </li>
             </ul>
           </div>
@@ -170,45 +188,11 @@
 
         <!--
         <div class="containerA__board__result">
-          <div class="containerA__result">
-            <div class="containerA__result__box">
-              <img id="result" src="./assets/transparent.png" alt="" />
-            </div>
-          </div>         
-          <div class="containerB__options__button">
-            <button
-              id="jugar"
-              class="containerB__options__button--confirm"
-              type="button"
-              disabled="true;"
-            >
-              Confirmar
-            </button>
-          </div>
+              
+          
+
         </div>
-      </section>
-      <section class="containerB">
-        <div class="containerB__options">
-          <div class="containerB__options__list">
-            <ul class="containerB__options__list--ul">
-              <li class="containerB__options__list--li">
-                <button id="Piedra">Piedra</button>
-              </li>
-              <li class="containerB__options__list--li">
-                <button id="Papel">Papel</button>
-              </li>
-              <li class="containerB__options__list--li">
-                <button id="Tijeras">Tijeras</button>
-              </li>
-              <li class="containerB__options__list--li">
-                <button id="Lagarto">Lagarto</button>
-              </li>
-              <li class="containerB__options__list--li">
-                <button id="Spock">Spock</button>
-              </li>
-            </ul>
-          </div>
-        </div>
+          
         -->
       </section>
     </main>

@@ -11,12 +11,15 @@ var btn_stateA = document.getElementById("stateA");
 var btn_stateB = document.getElementById("stateB");
 
 // El boton de confirmar seleccion
-//var btn_confirmar = document.getElementById("jugar");
+var btn_confirmar = document.getElementById("jugar");
+
 //Las imagenes que variaran dependiendo de las selecciones
 var img_user = document.getElementById("user");
 var img_pc = document.getElementById("pc");
+
 // y el resultado
 let img_result = document.getElementById("result");
+
 // Defino los marcadores
 var marcador_user = document.getElementById("puntos_user").innerText;
 var marcador_pc = document.getElementById("puntos_pc").innerText;
@@ -39,18 +42,19 @@ function init_imagenes() {
 };
 
 btn_stateA.onclick = function () {
-  console.log("goli");
+  console.log("goli_1");
   document.getElementById("containerA__bottonStateB").style.display = "flex";
   document.getElementById("containerA__bottonStateA").style.display = "none";
 };
 btn_stateB.onclick = function () {
-  console.log("goli");
+  console.log("goli_2");
+
   document.getElementById("containerA__bottonStateB").style.display = "none";
   document.getElementById("containerA__bottonStateA").style.display = "flex";
 };
 
 //Definimos las funciones de cada boton
-btn_confirmar.onclick = function () {
+function Game() {
   console.log(Opcion_jugador, " opt_player");
   Opcion_pc = num_aleatorio();
   console.log(Opcion_pc, " opt pc");
@@ -60,9 +64,10 @@ btn_confirmar.onclick = function () {
 
 //OnClick --- Buttons Options
 btn_piedra.onclick = function () {
-  Opcion_jugador = 0;
+  console.log("goliiis");
+  Opcion_jugador = 0;  
   img_user.src = "./assets/rockPPTLS.png";
-  btn_confirmar.disabled = false;
+  document.getElementById("divJugar").style.display="flex";
 };
 btn_papel.onclick = function () {
   Opcion_jugador = 1;
