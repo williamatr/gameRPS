@@ -72,22 +72,22 @@ btn_piedra.onclick = function () {
 btn_papel.onclick = function () {
   Opcion_jugador = 1;
   img_user.src = "./assets/paperPPTLS.png";
-  btn_confirmar.disabled = false;
+  document.getElementById("divJugar").style.display="flex";
 };
 btn_tijeras.onclick = function () {
   Opcion_jugador = 2;
   img_user.src = "./assets/scissorsPPTLS.png";
-  btn_confirmar.disabled = false;
+  document.getElementById("divJugar").style.display="flex";
 };
 btn_lagarto.onclick = function () {
   Opcion_jugador = 3;
   img_user.src = "./assets/lizardPPTLS.png";
-  btn_confirmar.disabled = false;
+  document.getElementById("divJugar").style.display="flex";
 };
 btn_spock.onclick = function () {
   Opcion_jugador = 4;
   img_user.src = "./assets/spockPPTLS.png";
-  btn_confirmar.disabled = false;
+  document.getElementById("divJugar").style.display="flex";
 };
 
 //Definimos la funcion que generara un numero

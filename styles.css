@@ -344,6 +344,7 @@ footer p > a:hover {
   right: 18vw;
   width: 15vw;
 }
+
 .containerA__board__confirm button {
   position: relative;
   z-index: 1;
@@ -448,13 +449,7 @@ footer p > a:hover {
   color: rgba(0, 0, 0, 0.8);
 }
 
-@media all and (max-width: 800px) {
-  .containerA__bottonStateA button svg {
-    width: 10vh;
-    padding: 2px;
-  }
-}
-@media screen and (min-width: 1920px) {
+@media all and (min-width: 1920px) {
   .containerA__healthAndNames__userA img {
     width: 6vw;
   }
@@ -480,6 +475,23 @@ footer p > a:hover {
   }
 }
 @media all and (max-height: 900px) {
+  .containerA__bottonStateA button svg {
+    width: 10vh;
+    padding: 2px;
+  }
+  .containerA__board__confirm button {
+    font-size: 5vh;
+    height: 5em;
+    width: 10em;
+    margin-top: 10vh;
+  }
+  .containerA__board__confirm button:hover {
+    font-size: 5vh;
+    height: 5em;
+    width: 10em;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.4);
+  }
   .containerA__healthAndNames {
     position: absolute;
     bottom: 54vh;
