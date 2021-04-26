@@ -544,17 +544,11 @@ footer p > a:hover {
     position: fixed;
     font-size: 5vh;
     height: 5em;
-    width: 10em;
+    width: 40vw;
     top: 30vh;
-    left: 78vh;
+    left: 30vw;
   }
-  .containerA__board__confirm button:hover {
-    font-size: 5vh;
-    height: 5em;
-    width: 10em;
-    cursor: pointer;
-    background: rgba(255, 255, 255, 0.4);
-  }
+  
   .containerA__healthAndNames {
     position: absolute;
     bottom: 54vh;
