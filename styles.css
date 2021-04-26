@@ -514,6 +514,7 @@ footer p > a:hover {
     top: 35vh;
     right: 20vw;
     width: 15vw;
+    transform: scaleX(-1);
   }
 
   .containerA__bottonStateA {
