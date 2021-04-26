@@ -500,9 +500,17 @@ footer p > a:hover {
     background: rgba(255, 255, 255, 0.2);
   }
 
-  .containerA__bottonStateA_hide svg {
+  .containerA__bottonStateA {
+    width: 100vw;
+  }
+  .containerA__bottonStateA button {
+    width: 100vw;
+    height: 15vh;
+  }
+  .containerA__bottonStateA button svg{
     height: 15vh;
     padding: 0;
+    margin: 0;
   }
 
   .containerA__bottonStateB {
@@ -529,19 +537,26 @@ footer p > a:hover {
     justify-content: center;
     width: 100vw;
     height: 10vh;
-    padding: 0;
     margin: 0;
     right: 0;
     top: 0;
     background: rgba(255, 255, 255, 0.4);
   }
   .containerA__bottonStateB__hide svg {
-    height: 10vh;
-    padding: 0;
+    height: 10vh;    
+    margin: 1vw;
   }
   
   .containerA__board__confirm button {
-    position: fixed;
+    position: absolute;
+    font-size: 5vh;
+    height: 5em;
+    width: 40vw;
+    top: 30vh;
+    left: 30vw;
+  }
+  .containerA__board__confirm button:hover {
+    position: absolute;
     font-size: 5vh;
     height: 5em;
     width: 40vw;
