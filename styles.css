@@ -344,6 +344,7 @@ footer p > a:hover {
   width: 22rem;
   cursor: pointer;
   background: rgba(255, 255, 255, 0.4);
+  outline: none;
 }
 
 .containerA__bottonStateA button {
