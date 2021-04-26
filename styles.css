@@ -336,6 +336,7 @@ footer p > a:hover {
   background: rgba(255, 255, 255, 0.3);
   color: white;
   transition: all 0.5s;
+  
 }
 .containerA__board__confirm button:hover {
   font-size: 5vh;
@@ -500,6 +501,21 @@ footer p > a:hover {
     background: rgba(255, 255, 255, 0.2);
   }
 
+  .containerA__board__user img {
+    display: flex;
+    position: absolute;
+    top: 35vh;
+    right: 65vw;
+    width: 15vw;
+  }
+  .containerA__board__pc img {
+    display: flex;
+    position: absolute;
+    top: 35vh;
+    right: 20vw;
+    width: 15vw;
+  }
+
   .containerA__bottonStateA {
     width: 100vw;
   }
@@ -536,7 +552,7 @@ footer p > a:hover {
     align-items: center;
     justify-content: center;
     width: 100vw;
-    height: 10vh;
+    height: 12vh;
     margin: 0;
     right: 0;
     top: 0;
@@ -544,7 +560,7 @@ footer p > a:hover {
   }
   .containerA__bottonStateB__hide svg {
     height: 10vh;    
-    margin: 1vw;
+    padding: 0;
   }
   
   .containerA__board__confirm button {
