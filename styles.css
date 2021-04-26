@@ -336,7 +336,7 @@ footer p > a:hover {
   background: rgba(255, 255, 255, 0.3);
   color: white;
   transition: all 0.5s;
-  
+  outline: none;
 }
 .containerA__board__confirm button:hover {
   font-size: 5vh;
@@ -524,7 +524,7 @@ footer p > a:hover {
     width: 100vw;
     height: 15vh;
   }
-  .containerA__bottonStateA button svg{
+  .containerA__bottonStateA button svg {
     height: 15vh;
     padding: 0;
     margin: 0;
@@ -560,10 +560,10 @@ footer p > a:hover {
     background: rgba(255, 255, 255, 0.4);
   }
   .containerA__bottonStateB__hide svg {
-    height: 10vh;    
+    height: 10vh;
     padding: 0;
   }
-  
+
   .containerA__board__confirm button {
     position: absolute;
     font-size: 5vh;
@@ -580,7 +580,7 @@ footer p > a:hover {
     top: 30vh;
     left: 30vw;
   }
-  
+
   .containerA__healthAndNames {
     position: absolute;
     bottom: 54vh;
