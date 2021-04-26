@@ -93,22 +93,6 @@ footer p > a:hover {
   color: rgba(34, 104, 235, 0.8);
 }
 
-@media screen and (max-width: 800px) {
-  body {
-    display: flex;
-  }
-  header {
-    display: none;
-  }
-  footer {
-    display: none;
-  }
-  main {
-    height: 100%;
-    width: 100%;
-  }
-}
-
 /*--- CSS en ID ---*/
 #stateB {
   transform: rotate(180deg);
@@ -219,10 +203,6 @@ footer p > a:hover {
   font-size: 3vw;
 }
 
-@media screen and (min-width: 1920px) {
-  .instructions__container {
-  }
-}
 /*--------------------------Tablero de juego ------*/
 .containerA {
   position: absolute;
@@ -475,15 +455,98 @@ footer p > a:hover {
   }
 }
 @media all and (max-height: 900px) {
-  .containerA__bottonStateA button svg {
-    width: 10vh;
-    padding: 2px;
+  body {
+    display: flex;
+    padding: 0;
+    margin: 0;
   }
+  header {
+    display: none;
+  }
+  footer {
+    display: none;
+  }
+  main {
+    height: 100%;
+    width: 100%;
+  }
+
+  .containerA {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    padding-bottom: 2vh;
+    border-radius: 0;
+    border: 0;
+    position: absolute;
+    margin: 0;
+    font-size: 3vw;
+    font-weight: bold;
+    text-align: center;
+    background: rgba(102, 51, 153, 0.5);
+    color: white;
+    flex-flow: column;
+  }
+
+  .containerA__healthAndNames {
+    display: flex;
+    justify-content: center;
+    align-items: space-around;
+    position: absolute;
+    top: 0;
+    flex-direction: row;
+    height: 15vh;
+    width: 100vw;
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .containerA__bottonStateA_hide svg {
+    height: 15vh;
+    padding: 0;
+  }
+
+  .containerA__bottonStateB {
+    display: flex;
+    position: absolute;
+    height: 35vh;
+    width: 100vw;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.3);
+  }
+  .containerA__bottonStateB button {
+    position: relative;
+    top: 0.5vh;
+    border: none;
+    transition: all 0.5s;
+    align-self: center;
+    outline: none;
+  }
+  .containerA__bottonStateB__hide {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 10vh;
+    padding: 0;
+    margin: 0;
+    right: 0;
+    top: 0;
+    background: rgba(255, 255, 255, 0.4);
+  }
+  .containerA__bottonStateB__hide svg {
+    height: 10vh;
+    padding: 0;
+  }
+  
   .containerA__board__confirm button {
+    position: fixed;
     font-size: 5vh;
     height: 5em;
     width: 10em;
-    margin-top: 10vh;
+    top: 30vh;
+    left: 78vh;
   }
   .containerA__board__confirm button:hover {
     font-size: 5vh;
@@ -495,17 +558,5 @@ footer p > a:hover {
   .containerA__healthAndNames {
     position: absolute;
     bottom: 54vh;
-  }
-  .containerA__board__confirm button {
-    position: relative;
-    z-index: 1;
-    font-size: 4vh;
-    height: 10rem;
-    width: 20rem;
-    margin-top: 30vh;
-    border-radius: 4vh;
-    background: rgba(255, 255, 255, 0.3);
-    color: white;
-    transition: all 0.5s;
   }
 }
