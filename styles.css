@@ -13,7 +13,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-flow: column nowrap;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(-45deg, #ee7752, #f064b6, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   animation: gradient 20s ease infinite;
 }
@@ -266,7 +266,11 @@ footer p > a:hover {
   border: 1px solid black;
   width: 30vw;
   height: 5vh;
-  background: rgba(255, 217, 0, 0.8);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 217, 0, 0.8) 100%,
+    rgba(138, 5, 5, 0.8) 100%
+  );
   transform: skew(-25deg);
 }
 
@@ -293,7 +297,11 @@ footer p > a:hover {
   border: 1px solid black;
   width: 30vw;
   height: 5vh;
-  background: rgba(255, 217, 0, 0.8);
+  background: linear-gradient(
+    90deg,
+    rgba(138, 5, 5, 0.8) 0%,
+    rgba(255, 217, 0, 0.8) 0%
+  );
   transform: skew(25deg);
 }
 
@@ -328,20 +336,20 @@ footer p > a:hover {
 .containerA__board__confirm button {
   position: relative;
   z-index: 1;
-  font-size: 4vh;
+  font-size: 3vw;
   height: 10rem;
   width: 20rem;
   margin-top: 10vh;
-  border-radius: 4vh;
+  border-radius: 2.5vw;
   background: rgba(255, 255, 255, 0.3);
   color: white;
   transition: all 0.5s;
   outline: none;
 }
 .containerA__board__confirm button:hover {
-  font-size: 5vh;
+  font-size: 4vw;
   height: 12rem;
-  width: 22rem;
+  width: 24rem;
   cursor: pointer;
   background: rgba(255, 255, 255, 0.4);
   outline: none;
@@ -456,7 +464,7 @@ footer p > a:hover {
     width: 10vw;
   }
 }
-@media all and (max-height: 900px) {
+@media all and (max-height: 890px) {
   body {
     display: flex;
     padding: 0;

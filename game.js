@@ -177,16 +177,19 @@ function game(opcion_jugador, opcion_pc) {
     escenario_10
   ) {
     //alert("user gana");
-    img_result.src = "./assets/ganas_PPTLS.png";
-    marcador_user++;
-    document.getElementById("puntos_user").innerText = marcador_user;
+    //img_result.src = "./assets/ganas_PPTLS.png";
+    marcador_user = 10;
+    var marcadorCpu = document.getElementById("puntos_user").innerText -= marcador_user;
+    console.log("Ganas", marcadorCpu);
   } else if (empate) {
+    console.log("Empate");
     //alert("EMPATE");
-    img_result.src = "./assets/empate_PPTLS.png";
+    //img_result.src = "./assets/empate_PPTLS.png";
   } else {
     //alert("pc gana");
-    img_result.src = "./assets/pierdes_PPTLS.png";
-    marcador_pc++;
-    document.getElementById("puntos_pc").innerText = marcador_pc;
+    //img_result.src = "./assets/pierdes_PPTLS.png";
+    marcador_pc = 10;
+    var marcadorUser = 100 - (document.getElementById("puntos_pc").innerText -= marcador_pc);
+    console.log("Ganas", marcadorUser);
   }
 };
