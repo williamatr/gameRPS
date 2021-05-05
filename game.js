@@ -262,6 +262,3 @@ function listenGameOver() {
   }
 }
 
-function reestar(){
-
-}
