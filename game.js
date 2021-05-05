@@ -54,6 +54,8 @@ btn_stateB.onclick = function () {
 
 //Continue Game
 function Action_continue() {
+  img_pc.src = "./assets/transparent.png";
+  img_user.src = "./assets/transparent.png";
   document.getElementById("divResult").style.display = "none";
   document.getElementById("containerA__bottonStateB").style.display = "flex";
   document.getElementById("containerA__bottonStateA").style.display = "none";
@@ -193,7 +195,7 @@ function game(opcion_jugador, opcion_pc) {
   ) {
     //alert("user gana");
     //img_result.src = "./assets/ganas_PPTLS.png";
-    marcador_user = 10;
+    marcador_user = 20;
     var marcadorCpu = (document.getElementById(
       "puntos_pc"
     ).innerText -= marcador_user);
@@ -213,17 +215,17 @@ function game(opcion_jugador, opcion_pc) {
   } else {
     //alert("pc gana");
     //img_result.src = "./assets/pierdes_PPTLS.png";
-    marcador_pc = 10;
+    marcador_pc = 20;
     var marcadorUser =
       100 - (document.getElementById("puntos_user").innerText -= marcador_pc);
-    console.log("Ganas", marcadorUser);
+    console.log("Ganas", marcadorUser, 100-marcadorUser);
     document.getElementById("textResult").innerText = "Has Perdido!";
     //-----------Lineas para control de barras de salud Usuario
     document.getElementById(
       "healthBarUser"
-    ).style.background = `linear-gradient(90deg,#ffd900cc ${
+    ).style.background = `linear-gradient(90deg, #ffd900cc ${
       100 - marcadorUser
-    }%,#8a0505cc ${marcadorUser}%)`;
+    }%, #8a0505cc ${100 - marcadorUser}%)`;
   }
   //`linear-gradient(90deg,#8a0505cc ${marcadorUser}%,#ffd900cc 100%);`
 }
