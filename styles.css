@@ -152,7 +152,7 @@ footer p > a:hover {
   background: none;
   color: white;
   border: 1px solid;
-  border-radius: 50px;
+  border-radius: 15%;
   font-size: 2vw;
   transition: all 0.5s;
   outline: none;
@@ -162,6 +162,8 @@ footer p > a:hover {
   border: 2px solid;
   font-size: 3vw;
   cursor: pointer;
+  height: 13vh;
+  width: 26vw;
 }
 
 /*----- CSS of the instructions ---*/
@@ -191,7 +193,7 @@ footer p > a:hover {
   background: none;
   color: white;
   border: 1px solid;
-  border-radius: 50px;
+  border-radius: 15%;
   font-size: 2vw;
   transition: all 0.5s;
   outline: none;
@@ -201,19 +203,21 @@ footer p > a:hover {
   border: 1px solid;
   cursor: pointer;
   font-size: 3vw;
+  height: 8.5vh;
+  width: 16vw;
 }
 
 /*--------------------------Tablero de juego ------*/
 .containerA {
   position: absolute;
   margin-top: 10px;
-  font-size: 3vw;
+  font-size: 5vh;
   font-weight: bold;
   text-align: center;
   width: 90vw;
   height: 70vh;
   border: 0.7vw double white;
-  border-radius: 20px;
+  border-radius: 15px;
   background: rgba(102, 51, 153, 0.5);
   color: white;
   display: flex;
@@ -247,6 +251,8 @@ footer p > a:hover {
   display: flex;
   flex-flow: row;
   height: 100%;
+  justify-content: center;
+  align-items: center;
 }
 .containerA__healthAndNames__userA img {
   align-self: center;
@@ -266,23 +272,28 @@ footer p > a:hover {
   border: 1px solid black;
   width: 30vw;
   height: 5vh;
+  font-size: 4vh;  
+  transform: skew(-25deg);
+}
+#healthBarUser{
   background: linear-gradient(
     90deg,
     rgba(255, 217, 0, 0.8) 100%,
     rgba(138, 5, 5, 0.8) 100%
   );
-  transform: skew(-25deg);
 }
 
 /*--- HEAD B --*/
 .containerA__healthAndNames__userB {
   display: flex;
   flex-flow: row;
+  justify-content: center;
+  align-items: center;
 }
 .containerA__healthAndNames__userB img {
   align-self: center;
   width: auto;
-  padding: 10px;
+  padding: 1vw;
   height: 7.5vw;
 }
 .containerA__healthAndNAme__userB__divBar {
@@ -297,12 +308,15 @@ footer p > a:hover {
   border: 1px solid black;
   width: 30vw;
   height: 5vh;
+  font-size: 4vh;
+  transform: skew(25deg);
+}
+#healthBarPC{
   background: linear-gradient(
     90deg,
     rgba(138, 5, 5, 0.8) 0%,
     rgba(255, 217, 0, 0.8) 0%
   );
-  transform: skew(25deg);
 }
 
 .containerA__healthAndNames__versus {
@@ -337,19 +351,19 @@ footer p > a:hover {
   position: relative;
   z-index: 1;
   font-size: 3vw;
-  height: 10rem;
-  width: 20rem;
+  height: 8rem;
+  width: 18rem;
   margin-top: 10vh;
-  border-radius: 2.5vw;
+  border-radius: 15%;
   background: rgba(255, 255, 255, 0.3);
   color: white;
   transition: all 0.5s;
   outline: none;
 }
 .containerA__board__confirm button:hover {
-  font-size: 4vw;
-  height: 12rem;
-  width: 24rem;
+  font-size: 3.5vw;
+  height: 9rem;
+  width: 19rem;
   cursor: pointer;
   background: rgba(255, 255, 255, 0.4);
   outline: none;
@@ -439,6 +453,37 @@ footer p > a:hover {
   color: rgba(0, 0, 0, 0.8);
 }
 
+.containerA__board__result--content{
+  position: relative;
+  z-index: 10;
+  height: 30vh;
+  width: 40vw;
+  top: 20%;
+  background-color: rgba(255, 255, 255,0.5);
+  border: 0.7vw double white;
+  border-radius: 5%;
+}
+.containerA__board__result--p{
+  margin-top: 10%;
+}
+.containerA__board__result--button{
+  margin-top: 10%;
+  font-size: 90%;
+  height: 22%;
+  width: 40%;
+  border-radius: 10%;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  background: rgba(255, 237, 237, 0.2);
+  outline: none;
+  transition: all 0.5s;
+}
+.containerA__board__result--button:hover{
+  height: 24%;
+  width: 42%;
+  font-size: 94%;
+}
+
 @media all and (min-width: 1920px) {
   .containerA__healthAndNames__userA img {
     width: 6vw;
@@ -462,6 +507,9 @@ footer p > a:hover {
 
   .containerA__healthAndNames__versus img {
     width: 10vw;
+  }
+  .containerA__board__result--button{
+    margin-top: 8%;
   }
 }
 @media all and (max-height: 890px) {
@@ -577,21 +625,43 @@ footer p > a:hover {
     position: absolute;
     font-size: 5vh;
     height: 5em;
-    width: 40vw;
+    width: 25vw;
     top: 30vh;
-    left: 30vw;
+    left: 38vw;
   }
   .containerA__board__confirm button:hover {
     position: absolute;
     font-size: 5vh;
     height: 5em;
-    width: 40vw;
+    width: 25vw;
     top: 30vh;
-    left: 30vw;
+    left: 38vw;
   }
 
   .containerA__healthAndNames {
     position: absolute;
     bottom: 54vh;
+  }
+
+  .containerA__board__result--content{
+    height: 40vh;
+    width: 60vw;
+    top: 70%;
+    background-color: rgba(255, 255, 255,0.2);
+    border: 0.7vw double white;
+  }
+  .containerA__board__result--p{
+    margin-top: 8%;
+  }
+  .containerA__board__result--button{
+    margin-top: 6%;
+    font-size: 100%;
+    height: 22%;
+    width: 30%;
+    border-radius: 10%;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.2);
+    outline: none;
   }
 }

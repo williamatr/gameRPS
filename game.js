@@ -39,7 +39,7 @@ function init_imagenes() {
   btn_tijeras.style.backgroundImage = "url('./assets/scissorsPPTLS.png')";
   btn_lagarto.style.backgroundImage = "url('./assets/lizardPPTLS.png')";
   btn_spock.style.backgroundImage = "url('./assets/spockPPTLS.png')";
-};
+}
 
 btn_stateA.onclick = function () {
   console.log("goli_1");
@@ -48,10 +48,24 @@ btn_stateA.onclick = function () {
 };
 btn_stateB.onclick = function () {
   console.log("goli_2");
-
   document.getElementById("containerA__bottonStateB").style.display = "none";
   document.getElementById("containerA__bottonStateA").style.display = "flex";
 };
+
+//Continue Game
+function Action_continue() {
+  document.getElementById("divResult").style.display = "none";
+  document.getElementById("containerA__bottonStateB").style.display = "flex";
+  document.getElementById("containerA__bottonStateA").style.display = "none";
+}
+
+//Show Results
+function Action_confirmar() {
+  document.getElementById("divResult").style.display = "flex";
+  document.getElementById("divJugar").style.display = "none";
+  document.getElementById("containerA__bottonStateB").style.display = "none";
+  document.getElementById("containerA__bottonStateA").style.display = "flex";
+}
 
 //Definimos las funciones de cada boton
 function Game() {
@@ -60,41 +74,42 @@ function Game() {
   console.log(Opcion_pc, " opt pc");
   display_opcion_pc(Opcion_pc);
   game(Opcion_jugador, Opcion_pc);
-};
+  Action_confirmar();
+}
 
 //OnClick --- Buttons Options
 btn_piedra.onclick = function () {
   console.log("goliiis");
-  Opcion_jugador = 0;  
+  Opcion_jugador = 0;
   img_user.src = "./assets/rockPPTLS.png";
-  document.getElementById("divJugar").style.display="flex";
+  document.getElementById("divJugar").style.display = "flex";
 };
 btn_papel.onclick = function () {
   Opcion_jugador = 1;
   img_user.src = "./assets/paperPPTLS.png";
-  document.getElementById("divJugar").style.display="flex";
+  document.getElementById("divJugar").style.display = "flex";
 };
 btn_tijeras.onclick = function () {
   Opcion_jugador = 2;
   img_user.src = "./assets/scissorsPPTLS.png";
-  document.getElementById("divJugar").style.display="flex";
+  document.getElementById("divJugar").style.display = "flex";
 };
 btn_lagarto.onclick = function () {
   Opcion_jugador = 3;
   img_user.src = "./assets/lizardPPTLS.png";
-  document.getElementById("divJugar").style.display="flex";
+  document.getElementById("divJugar").style.display = "flex";
 };
 btn_spock.onclick = function () {
   Opcion_jugador = 4;
   img_user.src = "./assets/spockPPTLS.png";
-  document.getElementById("divJugar").style.display="flex";
+  document.getElementById("divJugar").style.display = "flex";
 };
 
 //Definimos la funcion que generara un numero
 //aleatorio entre el 1 y el 5
 function num_aleatorio() {
   return parseInt(Math.random() * 5);
-};
+}
 
 // DEfinimos la funcion para mostrar la opcion del PC
 function display_opcion_pc(opcion) {
@@ -109,7 +124,7 @@ function display_opcion_pc(opcion) {
   } else {
     img_pc.src = "./assets/spockPPTLS.png";
   }
-};
+}
 
 //Defino las Reglas del juego
 function game(opcion_jugador, opcion_pc) {
@@ -179,17 +194,36 @@ function game(opcion_jugador, opcion_pc) {
     //alert("user gana");
     //img_result.src = "./assets/ganas_PPTLS.png";
     marcador_user = 10;
-    var marcadorCpu = document.getElementById("puntos_user").innerText -= marcador_user;
+    var marcadorCpu = (document.getElementById(
+      "puntos_pc"
+    ).innerText -= marcador_user);
     console.log("Ganas", marcadorCpu);
+    document.getElementById("textResult").innerText = "Has Ganado!";
+    //-----------Lineas para control de barras de salud PC
+    document.getElementById(
+      "healthBarPC"
+    ).style.background = `linear-gradient(90deg,#8a0505cc ${
+      100 - marcadorCpu
+    }%,#ffd900cc 0%)`;
   } else if (empate) {
     console.log("Empate");
     //alert("EMPATE");
     //img_result.src = "./assets/empate_PPTLS.png";
+    document.getElementById("textResult").innerText = "EMPATE! WTF?";
   } else {
     //alert("pc gana");
     //img_result.src = "./assets/pierdes_PPTLS.png";
     marcador_pc = 10;
-    var marcadorUser = 100 - (document.getElementById("puntos_pc").innerText -= marcador_pc);
+    var marcadorUser =
+      100 - (document.getElementById("puntos_user").innerText -= marcador_pc);
     console.log("Ganas", marcadorUser);
+    document.getElementById("textResult").innerText = "Has Perdido!";
+    //-----------Lineas para control de barras de salud Usuario
+    document.getElementById(
+      "healthBarUser"
+    ).style.background = `linear-gradient(90deg,#ffd900cc ${
+      100 - marcadorUser
+    }%,#8a0505cc ${marcadorUser}%)`;
   }
-};
+  //`linear-gradient(90deg,#8a0505cc ${marcadorUser}%,#ffd900cc 100%);`
+}
