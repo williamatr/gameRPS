@@ -28,6 +28,7 @@ var Opcion_jugador;
 var Opcion_pc;
 var marcadorUser;
 var marcadorCpu;
+var marcador;
 
 //Necesito inicializar las imagenes de los botones
 //Queda mas corto que en css
@@ -61,7 +62,7 @@ btn_stateB.onclick = function () {
 //First Mesage divFirstMsg
 
 //Continue Game
-function Action_continue() {
+function actionContinue() {
   img_pc.src = "./assets/transparent.png";
   img_user.src = "./assets/transparent.png";
   document.getElementById("divResult").style.display = "none";
@@ -70,7 +71,7 @@ function Action_continue() {
 }
 
 //Show Results
-function Action_confirmar() {
+function actionConfirmar() {
   document.getElementById("divResult").style.display = "flex";
   document.getElementById("divJugar").style.display = "none";
   document.getElementById("containerA__bottonStateB").style.display = "none";
@@ -84,7 +85,7 @@ function Game() {
   console.log(Opcion_pc, " opt pc");
   display_opcion_pc(Opcion_pc);
   game(Opcion_jugador, Opcion_pc);
-  Action_confirmar();
+  actionConfirmar();
   listenGameOver();
 }
 
@@ -205,6 +206,7 @@ function game(opcion_jugador, opcion_pc) {
     //alert("user gana");
     //img_result.src = "./assets/ganas_PPTLS.png";
     marcador_user = 20;
+    marcador="HAS GANADO";
     marcadorCpu = (document.getElementById(
       "puntos_pc"
     ).innerText -= marcador_user);
@@ -225,6 +227,7 @@ function game(opcion_jugador, opcion_pc) {
     //alert("pc gana");
     //img_result.src = "./assets/pierdes_PPTLS.png";
     marcador_pc = 20;
+    marcador="HAS PERDIDO";
     marcadorUser =
       100 - (document.getElementById("puntos_user").innerText -= marcador_pc);
     console.log("Pierdes", marcadorUser, 100 - marcadorUser);
@@ -238,8 +241,9 @@ function game(opcion_jugador, opcion_pc) {
   }
 }
 
-function gameOver() {
-  document.getElementById("divJugar").style.display = "none";
+function gameOver(marcador) {
+  document.getElementById("divGameOver").style.display = "flex";
+  document.getElementById("textGameOver").innerText = `¡¡${marcador}!!`;
   img_pc.src = "./assets/transparent.png";
   img_user.src = "./assets/transparent.png";
   document.getElementById("divResult").style.display = "none";
@@ -251,10 +255,13 @@ function gameOver() {
 function listenGameOver() {
   if (marcadorUser === 100) {
     console.log("Fin del juego Pierdes");
-    gameOver();
+    gameOver(marcador);
   } else if (marcadorCpu === 0) {
     console.log("Fin del juego Ganas");
-    gameOver();
+    gameOver(marcador);
   }
 }
 
+function reestar(){
+
+}

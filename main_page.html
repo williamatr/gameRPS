@@ -128,7 +128,7 @@
             <button
               id="jugar"
               class="containerA__board__result--button"
-              onclick="Action_continue()"
+              onclick="actionContinue()"
               type="button"
             >
               Continuar
@@ -151,6 +151,29 @@
               src="./assets/transparent.png"
               alt="imagen seleccionada PC"
             />
+          </div>
+        </div>
+
+        <div
+          id="divGameOver"
+          class="containerA__board__gameOver"
+          style="display: none"
+        >
+          <div class="containerA__board__gameOver--content">
+            <p id="textGameOver" class="containerA__board__gameOver--p">
+              ¡¡Has perdido!!
+            </p>
+            <p>
+              ¿Quieres un volver a jugar?
+            </p>
+            <button
+              id="reestar"
+              class="containerA__board__gameOver--button"
+              onclick="location.reload()"
+              type="button"
+            >
+              ¡A por otra partida!
+            </button>
           </div>
         </div>
 
