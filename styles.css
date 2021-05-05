@@ -13,7 +13,13 @@ body {
   align-items: center;
   justify-content: center;
   flex-flow: column nowrap;
-  background: linear-gradient(-45deg, hsl(14, 82%, 63%), hsl(325, 82%, 67%), hsl(196, 72%, 49%), hsl(166, 72%, 49%));
+  background: linear-gradient(
+    -45deg,
+    hsl(14, 82%, 63%),
+    hsl(325, 82%, 67%),
+    hsl(196, 72%, 49%),
+    hsl(166, 72%, 49%)
+  );
   background-size: 400% 400%;
   animation: gradient 20s ease infinite;
 }
@@ -487,10 +493,10 @@ footer p > a:hover {
 @keyframes updown {
   0%,
   100% {
-    top: 0%;
+    top: 1%;
   }
   50% {
-    top: 10%;
+    top: 3%;
   }
 }
 @keyframes updownT {
@@ -505,13 +511,17 @@ footer p > a:hover {
 
 .containerA__board__first svg {
   position: relative;
+  align-self: center;
   animation-name: updown;
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
 }
-.containerA__board__first {  
+.containerA__board__first {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  top: 40%;
+  top: 30%;
   animation-name: updownT;
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
@@ -523,8 +533,8 @@ footer p > a:hover {
   padding: 1%;
   width: 25vw;
   height: 10vh;
-  border-radius: 10%;
-  border: 1px blur;
+  font-size: 4vh;
+  border-radius: 50%;
   background: hsla(0, 0%, 100%, 0.4);
 }
 
@@ -708,4 +718,23 @@ footer p > a:hover {
     background: hsla(0, 0%, 100%, 0.2);
     outline: none;
   }
+
+  @keyframes updownT {
+    0%,
+    100% {
+      top: 50%;
+    }
+    50% {
+      top: 51%;
+    }
+  }
+  .containerA__board__first p {
+    padding: 5%;
+    width: 30vw;
+    height: 10vh;
+    font-size: 6vh;
+    border-radius: 50%;
+    background: hsla(0, 0%, 100%, 0.4);
+  }
+
 }

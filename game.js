@@ -42,6 +42,7 @@ function init_imagenes() {
 }
 
 btn_stateA.onclick = function () {
+  document.getElementById("divFirstMsg").style.display = "none";
   console.log("goli_1");
   document.getElementById("containerA__bottonStateB").style.display = "flex";
   document.getElementById("containerA__bottonStateA").style.display = "none";
@@ -51,6 +52,9 @@ btn_stateB.onclick = function () {
   document.getElementById("containerA__bottonStateB").style.display = "none";
   document.getElementById("containerA__bottonStateA").style.display = "flex";
 };
+
+//First Mesage divFirstMsg
+
 
 //Continue Game
 function Action_continue() {
