@@ -211,7 +211,7 @@ function game(opcion_jugador, opcion_pc) {
       "puntos_pc"
     ).innerText -= marcador_user);
     console.log("Ganas", marcadorCpu);
-    document.getElementById("textResult").innerText = "Has Ganado!";
+    document.getElementById("textResult").innerText = "¡Has Ganado!";
     //-----------Lineas para control de barras de salud PC
     document.getElementById(
       "healthBarPC"
@@ -222,7 +222,7 @@ function game(opcion_jugador, opcion_pc) {
     console.log("Empate");
     //alert("EMPATE");
     //img_result.src = "./assets/empate_PPTLS.png";
-    document.getElementById("textResult").innerText = "EMPATE! ¿WTF?";
+    document.getElementById("textResult").innerText = "¡EMPATE! ¿WTF?";
   } else {
     //alert("pc gana");
     //img_result.src = "./assets/pierdes_PPTLS.png";
@@ -231,7 +231,7 @@ function game(opcion_jugador, opcion_pc) {
     marcadorUser =
       100 - (document.getElementById("puntos_user").innerText -= marcador_pc);
     console.log("Pierdes", marcadorUser, 100 - marcadorUser);
-    document.getElementById("textResult").innerText = "Has Perdido!";
+    document.getElementById("textResult").innerText = "¡Has Perdido!";
     //-----------Lineas para control de barras de salud Usuario
     document.getElementById(
       "healthBarUser"
