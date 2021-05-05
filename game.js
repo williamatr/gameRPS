@@ -211,7 +211,7 @@ function game(opcion_jugador, opcion_pc) {
     console.log("Empate");
     //alert("EMPATE");
     //img_result.src = "./assets/empate_PPTLS.png";
-    document.getElementById("textResult").innerText = "EMPATE! WTF?";
+    document.getElementById("textResult").innerText = "EMPATE! ¿WTF?";
   } else {
     //alert("pc gana");
     //img_result.src = "./assets/pierdes_PPTLS.png";
@@ -227,5 +227,14 @@ function game(opcion_jugador, opcion_pc) {
       100 - marcadorUser
     }%, #8a0505cc ${100 - marcadorUser}%)`;
   }
-  //`linear-gradient(90deg,#8a0505cc ${marcadorUser}%,#ffd900cc 100%);`
+}
+
+function gameOver(){
+  document.getElementById("divJugar").style.display = "none";
+  img_pc.src = "./assets/transparent.png";
+  img_user.src = "./assets/transparent.png";
+  document.getElementById("divResult").style.display = "none";
+  document.getElementById("divJugar").style.display = "none";
+  document.getElementById("containerA__bottonStateB").style.display = "flex";
+  document.getElementById("containerA__bottonStateA").style.display = "none";
 }

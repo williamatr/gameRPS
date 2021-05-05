@@ -13,7 +13,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-flow: column nowrap;
-  background: linear-gradient(-45deg, #ee7752, #f064b6, #23a6d5, #23d5ab);
+  background: linear-gradient(-45deg, hsl(14, 82%, 63%), hsl(325, 82%, 67%), hsl(196, 72%, 49%), hsl(166, 72%, 49%));
   background-size: 400% 400%;
   animation: gradient 20s ease infinite;
 }
@@ -31,7 +31,7 @@ body {
 
 /*--- Header ---*/
 header {
-  background: rgba(0, 0, 0, 0.5);
+  background: hsla(0, 0%, 0%, 0.5);
   color: white;
   height: 8vh;
   display: flex;
@@ -72,7 +72,7 @@ main {
 
 /*--- Footer ---*/
 footer {
-  background: rgba(0, 0, 0, 0.5);
+  background: hsla(0, 0%, 0%, 0.5);
   color: white;
   height: 8vh;
   width: 100%;
@@ -87,10 +87,10 @@ footer p > a:link {
   text-decoration: none;
 }
 footer p > a:visited {
-  color: rgb(255, 255, 255, 0.5);
+  color: hsla(0, 0%, 100%, 0.5);
 }
 footer p > a:hover {
-  color: rgba(34, 104, 235, 0.8);
+  color: hsla(219, 83%, 53%, 0.8);
 }
 
 /*--- CSS en ID ---*/
@@ -158,7 +158,7 @@ footer p > a:hover {
   outline: none;
 }
 .index__container button:hover {
-  background: rgb(255, 255, 255, 0.1);
+  background: hsla(0, 0%, 100%, 0.1);
   border: 2px solid;
   font-size: 3vw;
   cursor: pointer;
@@ -168,7 +168,7 @@ footer p > a:hover {
 
 /*----- CSS of the instructions ---*/
 .instructions__container {
-  background: rgba(255, 255, 255, 0.2);
+  background: hsla(0, 0%, 100%, 0.2);
   display: flex;
   flex-flow: column;
   height: 90%;
@@ -199,7 +199,7 @@ footer p > a:hover {
   outline: none;
 }
 .instructions__container__button--continue:hover {
-  background: rgb(255, 255, 255, 0.1);
+  background: hsla(0, 0%, 100%, 0.1);
   border: 1px solid;
   cursor: pointer;
   font-size: 3vw;
@@ -218,7 +218,7 @@ footer p > a:hover {
   height: 70vh;
   border: 0.7vw double white;
   border-radius: 15px;
-  background: rgba(102, 51, 153, 0.5);
+  background: hsla(270, 50%, 40%, 0.5);
   color: white;
   display: flex;
   flex-flow: column;
@@ -235,7 +235,7 @@ footer p > a:hover {
   width: 89vw;
   bottom: 1vh;
   padding: 0.5vw;
-  background: rgba(255, 255, 255, 0.2);
+  background: hsla(0, 0%, 100%, 0.2);
 }
 .containerA__board {
   color: white;
@@ -272,14 +272,14 @@ footer p > a:hover {
   border: 1px solid black;
   width: 30vw;
   height: 5vh;
-  font-size: 4vh;  
+  font-size: 4vh;
   transform: skew(-25deg);
 }
-#healthBarUser{
+#healthBarUser {
   background: linear-gradient(
     90deg,
-    rgba(255, 217, 0, 0.8) 100%,
-    rgba(138, 5, 5, 0.8) 100%
+    hsla(51, 100%, 50%, 0.8) 100%,
+    hsla(0, 93%, 28%, 0.8) 100%
   );
 }
 
@@ -311,11 +311,11 @@ footer p > a:hover {
   font-size: 4vh;
   transform: skew(25deg);
 }
-#healthBarPC{
+#healthBarPC {
   background: linear-gradient(
     90deg,
-    rgba(138, 5, 5, 0.8) 0%,
-    rgba(255, 217, 0, 0.8) 0%
+    hsla(0, 93%, 28%, 0.8) 0%,
+    hsla(51, 100%, 50%, 0.8) 0%
   );
 }
 
@@ -355,7 +355,7 @@ footer p > a:hover {
   width: 18rem;
   margin-top: 10vh;
   border-radius: 15%;
-  background: rgba(255, 255, 255, 0.3);
+  background: hsla(0, 0%, 100%, 0.3);
   color: white;
   transition: all 0.5s;
   outline: none;
@@ -365,7 +365,7 @@ footer p > a:hover {
   height: 9rem;
   width: 19rem;
   cursor: pointer;
-  background: rgba(255, 255, 255, 0.4);
+  background: hsla(0, 0%, 100%, 0.4);
   outline: none;
 }
 
@@ -381,7 +381,7 @@ footer p > a:hover {
 }
 .containerA__bottonStateA button:hover {
   cursor: pointer;
-  background: rgba(255, 255, 255, 0.1);
+  background: hsla(0, 0%, 100%, 0.1);
 }
 .containerA__bottonStateA button svg {
   width: 10vh;
@@ -394,7 +394,7 @@ footer p > a:hover {
   align-items: center;
   justify-content: center;
   z-index: 10;
-  background: rgba(255, 255, 255, 0.1);
+  background: hsla(0, 0%, 100%, 0.1);
 }
 .containerA__bottonStateB button {
   position: relative;
@@ -409,7 +409,7 @@ footer p > a:hover {
 }
 .containerA__bottonStateB button:hover {
   cursor: pointer;
-  background: rgba(255, 255, 255, 0.2);
+  background: hsla(0, 0%, 100%, 0.2);
 }
 .containerA__bottonStateB button svg {
   width: 10vh;
@@ -441,7 +441,7 @@ footer p > a:hover {
   width: 10vw;
   border: 0;
   font-size: 1.5vw;
-  color: rgba(0, 0, 0, 0.6);
+  color: hsla(0, 0%, 0%, 0.6);
 }
 .containerA__bottonStateB__options--li button:hover {
   height: 12vw;
@@ -450,38 +450,82 @@ footer p > a:hover {
   cursor: pointer;
   background-color: transparent;
   background-size: cover;
-  color: rgba(0, 0, 0, 0.8);
+  color: hsla(0, 0%, 0%, 0.8);
 }
 
-.containerA__board__result--content{
+.containerA__board__result--content {
   position: relative;
   z-index: 10;
   height: 30vh;
   width: 40vw;
   top: 20%;
-  background-color: rgba(192, 192, 192, 0.5);
+  background-color: hsla(0, 0%, 75%, 0.5);
   border: 0.7vw double white;
   border-radius: 5%;
 }
-.containerA__board__result--p{
+.containerA__board__result--p {
   margin-top: 10%;
 }
-.containerA__board__result--button{
+.containerA__board__result--button {
   margin-top: 10%;
   font-size: 90%;
   height: 22%;
   width: 40%;
   border-radius: 10%;
-  color: rgb(255, 255, 255);
+  color: hsl(0, 0%, 100%);
   cursor: pointer;
-  background: rgba(255, 255, 255, 0.2);
+  background: hsla(0, 0%, 100%, 0.2);
   outline: none;
   transition: all 0.5s;
 }
-.containerA__board__result--button:hover{
+.containerA__board__result--button:hover {
   height: 24%;
   width: 42%;
   font-size: 94%;
+}
+
+@keyframes updown {
+  0%,
+  100% {
+    top: 0%;
+  }
+  50% {
+    top: 10%;
+  }
+}
+@keyframes updownT {
+  0%,
+  100% {
+    top: 35%;
+  }
+  50% {
+    top: 36%;
+  }
+}
+
+.containerA__board__first svg {
+  position: relative;
+  animation-name: updown;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+.containerA__board__first {  
+  position: relative;
+  top: 40%;
+  animation-name: updownT;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+.containerA__board__first p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1%;
+  width: 25vw;
+  height: 10vh;
+  border-radius: 10%;
+  border: 1px blur;
+  background: hsla(0, 0%, 100%, 0.4);
 }
 
 @media all and (min-width: 1920px) {
@@ -508,7 +552,7 @@ footer p > a:hover {
   .containerA__healthAndNames__versus img {
     width: 10vw;
   }
-  .containerA__board__result--button{
+  .containerA__board__result--button {
     margin-top: 8%;
   }
 }
@@ -541,7 +585,7 @@ footer p > a:hover {
     font-size: 3vw;
     font-weight: bold;
     text-align: center;
-    background: rgba(102, 51, 153, 0.5);
+    background: hsla(270, 50%, 40%, 0.5);
     color: white;
     flex-flow: column;
   }
@@ -555,7 +599,7 @@ footer p > a:hover {
     flex-direction: row;
     height: 15vh;
     width: 100vw;
-    background: rgba(255, 255, 255, 0.2);
+    background: hsla(0, 0%, 100%, 0.2);
   }
 
   .containerA__board__user img {
@@ -594,7 +638,7 @@ footer p > a:hover {
     width: 100vw;
     right: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.3);
+    background: hsla(0, 0%, 100%, 0.3);
   }
   .containerA__bottonStateB button {
     position: relative;
@@ -614,7 +658,7 @@ footer p > a:hover {
     margin: 0;
     right: 0;
     top: 0;
-    background: rgba(255, 255, 255, 0.4);
+    background: hsla(0, 0%, 100%, 0.4);
   }
   .containerA__bottonStateB__hide svg {
     height: 10vh;
@@ -643,25 +687,25 @@ footer p > a:hover {
     bottom: 54vh;
   }
 
-  .containerA__board__result--content{
+  .containerA__board__result--content {
     height: 40vh;
     width: 60vw;
     top: 70%;
-    background-color: rgba(255, 255, 255,0.2);
-    border: 0.7vw double white;
+    background-color: hsla(0, 0%, 100%, 0.2);
+    border: 0.7vw double hsl(0, 0%, 100%);
   }
-  .containerA__board__result--p{
+  .containerA__board__result--p {
     margin-top: 8%;
   }
-  .containerA__board__result--button{
+  .containerA__board__result--button {
     margin-top: 6%;
     font-size: 100%;
     height: 22%;
     width: 30%;
     border-radius: 10%;
-    color: rgb(255, 255, 255);
+    color: hsla(0, 0%, 100%);
     cursor: pointer;
-    background: rgba(255, 255, 255, 0.2);
+    background: hsla(0, 0%, 100%, 0.2);
     outline: none;
   }
 }
