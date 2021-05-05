@@ -358,8 +358,8 @@ footer p > a:hover {
   z-index: 1;
   font-size: 3vw;
   height: 8rem;
-  width: 18rem;
-  margin-top: 10vh;
+  width: 19rem;
+  margin-top: 15vh;
   border-radius: 15%;
   background: hsla(0, 0%, 100%, 0.3);
   color: white;
@@ -367,9 +367,9 @@ footer p > a:hover {
   outline: none;
 }
 .containerA__board__confirm button:hover {
-  font-size: 3.5vw;
+  font-size: 3.1vw;
   height: 9rem;
-  width: 19rem;
+  width: 20rem;
   cursor: pointer;
   background: hsla(0, 0%, 100%, 0.4);
   outline: none;
@@ -502,10 +502,10 @@ footer p > a:hover {
 @keyframes updownT {
   0%,
   100% {
-    top: 35%;
+    top: 30%;
   }
   50% {
-    top: 36%;
+    top: 31%;
   }
 }
 
@@ -521,7 +521,6 @@ footer p > a:hover {
   align-items: center;
   justify-content: center;
   position: relative;
-  top: 30%;
   animation-name: updownT;
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
@@ -535,7 +534,8 @@ footer p > a:hover {
   height: 10vh;
   font-size: 4vh;
   border-radius: 50%;
-  background: hsla(0, 0%, 100%, 0.4);
+  border: 1px solid hsla(0, 0%, 100%, 0.4);
+  background: hsla(0, 0%, 100%, 0.05);
 }
 
 @media all and (min-width: 1920px) {
@@ -564,6 +564,15 @@ footer p > a:hover {
   }
   .containerA__board__result--button {
     margin-top: 8%;
+  }
+
+  .containerA__board__confirm button {
+    position: relative;
+    z-index: 1;
+    font-size: 2.5vw;
+  }
+  .containerA__board__confirm button:hover {
+    font-size: 3vw;
   }
 }
 @media all and (max-height: 890px) {
@@ -677,19 +686,19 @@ footer p > a:hover {
 
   .containerA__board__confirm button {
     position: absolute;
-    font-size: 5vh;
-    height: 5em;
-    width: 25vw;
+    font-size: 4vw;
+    height: 3em;
+    width: 30%;
     top: 30vh;
-    left: 38vw;
+    left: 35%;
   }
   .containerA__board__confirm button:hover {
     position: absolute;
-    font-size: 5vh;
-    height: 5em;
-    width: 25vw;
+    font-size: 4vw;
+    height: 3em;
+    width: 30%;
     top: 30vh;
-    left: 38vw;
+    left: 35%;
   }
 
   .containerA__healthAndNames {
@@ -718,6 +727,10 @@ footer p > a:hover {
     background: hsla(0, 0%, 100%, 0.2);
     outline: none;
   }
+  .containerA__board__result--button:hover {
+    height: 24%;
+    width: 32%;
+  }
 
   @keyframes updownT {
     0%,
@@ -730,11 +743,14 @@ footer p > a:hover {
   }
   .containerA__board__first p {
     padding: 5%;
-    width: 30vw;
+    width: 35vw;
     height: 10vh;
     font-size: 6vh;
     border-radius: 50%;
-    background: hsla(0, 0%, 100%, 0.4);
+    border: 1px solid hsla(0, 0%, 100%, 0.4);
+    background: hsla(0, 0%, 100%, 0.05);
   }
-
+  .containerA__board__first svg {
+    height: 15vh;
+  }
 }
