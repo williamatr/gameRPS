@@ -26,10 +26,15 @@ var marcador_pc = document.getElementById("puntos_pc").innerText;
 
 var Opcion_jugador;
 var Opcion_pc;
+var marcadorUser;
+var marcadorCpu;
 
 //Necesito inicializar las imagenes de los botones
 //Queda mas corto que en css
 init_imagenes();
+
+//Inicializo el escuchador del error
+
 
 // Hacemos la funcion para poners las imagenes correspondientes
 //en nuestros botones
@@ -54,7 +59,6 @@ btn_stateB.onclick = function () {
 };
 
 //First Mesage divFirstMsg
-
 
 //Continue Game
 function Action_continue() {
@@ -81,6 +85,7 @@ function Game() {
   display_opcion_pc(Opcion_pc);
   game(Opcion_jugador, Opcion_pc);
   Action_confirmar();
+  listenGameOver();
 }
 
 //OnClick --- Buttons Options
@@ -200,7 +205,7 @@ function game(opcion_jugador, opcion_pc) {
     //alert("user gana");
     //img_result.src = "./assets/ganas_PPTLS.png";
     marcador_user = 20;
-    var marcadorCpu = (document.getElementById(
+    marcadorCpu = (document.getElementById(
       "puntos_pc"
     ).innerText -= marcador_user);
     console.log("Ganas", marcadorCpu);
@@ -220,9 +225,9 @@ function game(opcion_jugador, opcion_pc) {
     //alert("pc gana");
     //img_result.src = "./assets/pierdes_PPTLS.png";
     marcador_pc = 20;
-    var marcadorUser =
+    marcadorUser =
       100 - (document.getElementById("puntos_user").innerText -= marcador_pc);
-    console.log("Pierdes", marcadorUser, 100-marcadorUser);
+    console.log("Pierdes", marcadorUser, 100 - marcadorUser);
     document.getElementById("textResult").innerText = "Has Perdido!";
     //-----------Lineas para control de barras de salud Usuario
     document.getElementById(
@@ -233,12 +238,23 @@ function game(opcion_jugador, opcion_pc) {
   }
 }
 
-function gameOver(){
+function gameOver() {
   document.getElementById("divJugar").style.display = "none";
   img_pc.src = "./assets/transparent.png";
   img_user.src = "./assets/transparent.png";
   document.getElementById("divResult").style.display = "none";
   document.getElementById("divJugar").style.display = "none";
-  document.getElementById("containerA__bottonStateB").style.display = "flex";
+  document.getElementById("containerA__bottonStateB").style.display = "none";
   document.getElementById("containerA__bottonStateA").style.display = "none";
 }
+
+function listenGameOver() {
+  if (marcadorUser === 100) {
+    console.log("Fin del juego Pierdes");
+    gameOver();
+  } else if (marcadorCpu === 0) {
+    console.log("Fin del juego Ganas");
+    gameOver();
+  }
+}
+
