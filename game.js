@@ -222,7 +222,7 @@ function game(opcion_jugador, opcion_pc) {
     marcador_pc = 20;
     var marcadorUser =
       100 - (document.getElementById("puntos_user").innerText -= marcador_pc);
-    console.log("Ganas", marcadorUser, 100-marcadorUser);
+    console.log("Pierdes", marcadorUser, 100-marcadorUser);
     document.getElementById("textResult").innerText = "Has Perdido!";
     //-----------Lineas para control de barras de salud Usuario
     document.getElementById(
