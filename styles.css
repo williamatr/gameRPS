@@ -110,7 +110,11 @@ footer p > a:hover {
   justify-content: center;
   text-align: center;
   color: white;
+  flex-flow: column;
   font-size: 3vh;
+}
+#aviso-movil-horizontal p{
+  padding: 10%;
 }
 
 @media only all and (orientation: portrait) {
@@ -152,6 +156,22 @@ footer p > a:hover {
 }
 
 /*-------- INDEX -------*/
+.index__container{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  border: 1px solid white;
+  padding: 1vw;
+  background:hsla(0, 0%, 50%, 0.2)
+}
+.index__container div {
+  padding: 1vw;
+}
+.index__container p {
+  font-size: 2vw;
+  color: white;
+  margin-bottom: 5vh;
+}
 .index__container button {
   height: 12vh;
   width: 25vw;
@@ -162,14 +182,15 @@ footer p > a:hover {
   font-size: 2vw;
   transition: all 0.5s;
   outline: none;
+  background: hsla(0, 0%, 100%, 0.1);
 }
 .index__container button:hover {
-  background: hsla(0, 0%, 100%, 0.1);
+  background: hsla(0, 0%, 100%, 0.2);
   border: 2px solid;
   font-size: 3vw;
   cursor: pointer;
-  height: 13vh;
-  width: 26vw;
+  height: 12.5vh;
+  width: 25.5vw;
 }
 
 /*----- CSS of the instructions ---*/
@@ -463,7 +484,7 @@ footer p > a:hover {
   position: relative;
   z-index: 10;
   height: 30vh;
-  width: 40vw;
+  width: 50vw;
   top: 20%;
   background-color: hsla(0, 0%, 75%, 0.5);
   border: 0.7vw double white;
@@ -814,5 +835,18 @@ footer p > a:hover {
     height: 10vh;
     width: 30vw;
     background: hsla(0, 0%, 80%, 0.5);
+  }
+}
+@media all and (max-width: 890px) {
+  body {
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+  header {
+    display: none;
+  }
+  footer {
+    display: none;
   }
 }
