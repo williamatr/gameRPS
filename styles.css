@@ -15,8 +15,8 @@ body {
   flex-flow: column nowrap;
   background: linear-gradient(
     -45deg,
+    hsl(352, 82%, 67%),
     hsl(14, 82%, 63%),
-    hsl(325, 82%, 67%),
     hsl(196, 72%, 49%),
     hsl(166, 72%, 49%)
   );
@@ -113,7 +113,7 @@ footer p > a:hover {
   flex-flow: column;
   font-size: 3vh;
 }
-#aviso-movil-horizontal p{
+#aviso-movil-horizontal p {
   padding: 10%;
 }
 
@@ -156,13 +156,13 @@ footer p > a:hover {
 }
 
 /*-------- INDEX -------*/
-.index__container{
+.index__container {
   display: flex;
   flex-flow: column;
   align-items: center;
   border: 1px solid white;
   padding: 1vw;
-  background:hsla(0, 0%, 50%, 0.2)
+  background: hsla(0, 0%, 50%, 0.2);
 }
 .index__container div {
   padding: 1vw;
